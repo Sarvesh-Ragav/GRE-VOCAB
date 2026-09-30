@@ -1,0 +1,75 @@
+.boot-msg {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  color: var(--muted);
+  font-family: var(--font-ui);
+}
+
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 0.85rem;
+  font-family: var(--font-ui);
+  font-weight: 650;
+  font-size: 1rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  min-height: 3rem;
+  transition: transform 0.08s ease, opacity 0.15s ease;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-lg {
+  min-height: 3.25rem;
+  font-size: 1.05rem;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.btn-secondary {
+  background: var(--surface-2);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+}
+
+.btn-good {
+  background: var(--accent);
+  color: #06241c;
+}
+
+.btn-bad {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border: 1px solid color-mix(in srgb, var(--danger) 35%, transparent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
