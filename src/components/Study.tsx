@@ -37,7 +37,6 @@ export function Study({
 
   const initialQueue = useMemo(
     () => buildSessionQueue(group.wordIds, progress, mode),
-    // Only seed once when entering the session
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [group.id, mode],
   )
@@ -46,9 +45,9 @@ export function Study({
   const [phase, setPhase] = useState<Phase>(initialQueue.length ? 'prompt' : 'done')
   const [draft, setDraft] = useState('')
   const [usedHelp, setUsedHelp] = useState(false)
+  const [showClue, setShowClue] = useState(false)
   const [options, setOptions] = useState<string[]>([])
   const [seenCount, setSeenCount] = useState(0)
-  /** Miss already applied (don't know); next only advances queue */
   const [preGradedMiss, setPreGradedMiss] = useState(false)
   const [pendingQueue, setPendingQueue] = useState<number[] | null>(null)
 
@@ -63,6 +62,7 @@ export function Study({
   function resetCardUi() {
     setDraft('')
     setUsedHelp(false)
+    setShowClue(false)
     setOptions([])
     setPreGradedMiss(false)
     setPendingQueue(null)
@@ -101,6 +101,11 @@ export function Study({
     setUsedHelp(true)
     setOptions(pickMeaningOptions(current, groupWords))
     setPhase('options')
+  }
+
+  function peekClue() {
+    setShowClue(true)
+    setUsedHelp(true)
   }
 
   function submitGuess() {
@@ -149,7 +154,6 @@ export function Study({
 
     function onKeyDown(e: KeyboardEvent) {
       if (e.key !== 'Enter' || e.shiftKey || e.repeat) return
-      // Don't steal Enter from another focused control except our buttons
       const tag = (e.target as HTMLElement | null)?.tagName
       if (tag === 'TEXTAREA' || tag === 'INPUT') return
       e.preventDefault()
@@ -180,6 +184,9 @@ export function Study({
     )
   }
 
+  const clue = current.clue || current.meaning.split(/[;.]/)[0]
+  const example = current.example || ''
+
   return (
     <div className="study">
       <header className="study-top">
@@ -200,152 +207,179 @@ export function Study({
         </div>
       </header>
 
-      <div className="study-word-wrap">
-        <p className="study-label">What does this mean?</p>
-        <h1 className="study-word">{current.word}</h1>
-      </div>
-
-      {phase === 'prompt' && (
-        <div className="study-actions">
-          <button type="button" className="btn btn-primary btn-lg" onClick={startTyping}>
-            Guess
-          </button>
-          <button
-            type="button"
-            className="btn btn-secondary btn-lg"
-            onClick={handleDontKnow}
-          >
-            I don&apos;t know
-          </button>
-          <button
-            type="button"
-            className="btn btn-ghost btn-lg"
-            onClick={handleSeeOptions}
-          >
-            See options
-          </button>
+      <div className="study-stage">
+        <div className="study-hero">
+          <p className="study-label">What does this mean?</p>
+          <h1 className="study-word">{current.word}</h1>
         </div>
-      )}
 
-      {phase === 'typing' && (
-        <form
-          className="study-type"
-          onSubmit={(e) => {
-            e.preventDefault()
-            if (draft.trim()) submitGuess()
-          }}
-        >
-          <label htmlFor="meaning-input" className="sr-only">
-            Type the meaning
-          </label>
-          <textarea
-            id="meaning-input"
-            className="meaning-input"
-            rows={3}
-            placeholder="Type the meaning…"
-            value={draft}
-            onChange={(e) => setDraft(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault()
-                if (draft.trim()) submitGuess()
-              }
-            }}
-            autoFocus
-            enterKeyHint="done"
-          />
-          {usedHelp && (
-            <p className="help-note">Options were shown — counts as helped.</p>
-          )}
-          <button
-            type="submit"
-            className="btn btn-primary btn-lg"
-            disabled={!draft.trim()}
-          >
-            Check
-          </button>
-        </form>
-      )}
-
-      {phase === 'options' && (
-        <div className="study-options">
-          <p className="options-hint">
-            Peek for a hint, then type the meaning. Using options marks this word
-            for extra practice.
-          </p>
-          <ul className="options-list">
-            {options.map((opt) => (
-              <li key={opt}>
-                <button
-                  type="button"
-                  className="option-chip"
-                  onClick={() => {
-                    setDraft(opt)
-                    setPhase('typing')
-                  }}
-                >
-                  {opt}
-                </button>
-              </li>
-            ))}
-          </ul>
-          <button
-            type="button"
-            className="btn btn-primary btn-lg"
-            onClick={() => setPhase('typing')}
-          >
-            Type my answer
-          </button>
-        </div>
-      )}
-
-      {phase === 'reveal' && (
-        <div className="study-reveal">
-          {draft.trim() && (
-            <div className="your-answer">
-              <span className="reveal-label">You wrote</span>
-              <p>{draft.trim()}</p>
-            </div>
-          )}
-          <div className="correct-answer">
-            <span className="reveal-label">Meaning</span>
-            <p>{current.meaning}</p>
+        {(phase === 'prompt' || phase === 'typing') && (
+          <div className="study-assist">
+            {showClue ? (
+              <div className="info-card clue-card">
+                <span className="reveal-label">Clue</span>
+                <p>{clue}</p>
+              </div>
+            ) : (
+              <button type="button" className="btn btn-ghost clue-peek" onClick={peekClue}>
+                Peek clue
+              </button>
+            )}
           </div>
+        )}
 
-          {preGradedMiss ? (
+        {phase === 'prompt' && (
+          <div className="study-actions">
+            <button type="button" className="btn btn-primary btn-lg" onClick={startTyping}>
+              Guess
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary btn-lg"
+              onClick={handleDontKnow}
+            >
+              I don&apos;t know
+            </button>
+            <button
+              type="button"
+              className="btn btn-ghost btn-lg"
+              onClick={handleSeeOptions}
+            >
+              See options
+            </button>
+          </div>
+        )}
+
+        {phase === 'typing' && (
+          <form
+            className="study-type"
+            onSubmit={(e) => {
+              e.preventDefault()
+              if (draft.trim()) submitGuess()
+            }}
+          >
+            <label htmlFor="meaning-input" className="sr-only">
+              Type the meaning
+            </label>
+            <textarea
+              id="meaning-input"
+              className="meaning-input"
+              rows={2}
+              placeholder="Type the meaning…"
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault()
+                  if (draft.trim()) submitGuess()
+                }
+              }}
+              autoFocus
+              enterKeyHint="done"
+            />
+            {usedHelp && (
+              <p className="help-note">Help was used — counts as helped.</p>
+            )}
+            <button
+              type="submit"
+              className="btn btn-primary btn-lg"
+              disabled={!draft.trim()}
+            >
+              Check
+            </button>
+          </form>
+        )}
+
+        {phase === 'options' && (
+          <div className="study-options">
+            <p className="options-hint">
+              Peek for a hint, then type the meaning. Using options marks this word
+              for extra practice.
+            </p>
+            <ul className="options-list">
+              {options.map((opt) => (
+                <li key={opt}>
+                  <button
+                    type="button"
+                    className="option-chip"
+                    onClick={() => {
+                      setDraft(opt)
+                      setPhase('typing')
+                    }}
+                  >
+                    {opt}
+                  </button>
+                </li>
+              ))}
+            </ul>
             <button
               type="button"
               className="btn btn-primary btn-lg"
-              onClick={continueAfterDontKnow}
+              onClick={() => setPhase('typing')}
             >
-              Next word
+              Type my answer
             </button>
-          ) : (
-            <div className="grade-row">
-              <button
-                type="button"
-                className="btn btn-good btn-lg"
-                onClick={() => grade('correct')}
-              >
-                Got it
-              </button>
-              <button
-                type="button"
-                className="btn btn-bad btn-lg"
-                onClick={() => grade('miss')}
-              >
-                Missed
-              </button>
-            </div>
-          )}
+          </div>
+        )}
 
-          {(mode === 'revise' || wp?.status === 'mastered') && !preGradedMiss && (
-            <button type="button" className="btn btn-ghost" onClick={onNotConfident}>
-              Not confident — needs revise
-            </button>
-          )}
-        </div>
-      )}
+        {phase === 'reveal' && (
+          <div className="study-reveal">
+            {draft.trim() && (
+              <div className="info-card your-answer">
+                <span className="reveal-label">You wrote</span>
+                <p>{draft.trim()}</p>
+              </div>
+            )}
+            <div className="info-card correct-answer">
+              <span className="reveal-label">Meaning</span>
+              <p>{current.meaning}</p>
+            </div>
+            <div className="info-card clue-card">
+              <span className="reveal-label">Clue</span>
+              <p>{clue}</p>
+            </div>
+            {example && (
+              <div className="info-card example-card">
+                <span className="reveal-label">Example</span>
+                <p>{example}</p>
+              </div>
+            )}
+
+            {preGradedMiss ? (
+              <button
+                type="button"
+                className="btn btn-primary btn-lg"
+                onClick={continueAfterDontKnow}
+              >
+                Next word
+              </button>
+            ) : (
+              <div className="grade-row">
+                <button
+                  type="button"
+                  className="btn btn-good btn-lg"
+                  onClick={() => grade('correct')}
+                >
+                  Got it
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-bad btn-lg"
+                  onClick={() => grade('miss')}
+                >
+                  Missed
+                </button>
+              </div>
+            )}
+
+            {(mode === 'revise' || wp?.status === 'mastered') && !preGradedMiss && (
+              <button type="button" className="btn btn-ghost" onClick={onNotConfident}>
+                Not confident — needs revise
+              </button>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   )
 }
