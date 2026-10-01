@@ -1,8 +1,16 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ProgressStore, StudyMode, VocabWord, WordGroup } from './types'
 import { MASTER_REVISION_ID } from './types'
 import { buildGroups, buildMasterRevisionGroup } from './lib/groups'
-import { loadProgress, saveProgress } from './lib/progress'
+import { emptyProgress, loadProgress, saveProgress } from './lib/progress'
+import {
+  clearSyncCode,
+  ensureSyncCode,
+  getSyncCode,
+  isSyncConfigured,
+  setSyncCode,
+  syncNow,
+} from './lib/sync'
 import { Home } from './components/Home'
 import { Study } from './components/Study'
 import './App.css'
@@ -16,6 +24,13 @@ export default function App() {
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState<ProgressStore>(() => loadProgress())
   const [screen, setScreen] = useState<Screen>({ name: 'home' })
+  const [syncCode, setSyncCodeState] = useState(() =>
+    isSyncConfigured() ? ensureSyncCode() : getSyncCode() ?? '',
+  )
+  const [syncStatus, setSyncStatus] = useState<string>('…')
+  const pushTimer = useRef<number | null>(null)
+  const progressRef = useRef(progress)
+  progressRef.current = progress
 
   useEffect(() => {
     fetch('/vocab.json')
@@ -26,6 +41,56 @@ export default function App() {
       .then((data: VocabWord[]) => setWords(data))
       .catch((e: Error) => setError(e.message))
   }, [])
+
+  async function runSync(label = 'Synced') {
+    if (!isSyncConfigured()) {
+      setSyncStatus('Sync offline')
+      return
+    }
+    try {
+      setSyncStatus('Syncing…')
+      const merged = await syncNow(progressRef.current)
+      setProgress(merged)
+      saveProgress(merged)
+      setSyncCodeState(ensureSyncCode())
+      setSyncStatus(label)
+    } catch (e) {
+      console.error(e)
+      setSyncStatus('Sync failed')
+    }
+  }
+
+  // Initial sync + when tab becomes visible again
+  useEffect(() => {
+    void runSync('Synced')
+    function onVisible() {
+      if (document.visibilityState === 'visible') void runSync('Synced')
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    const interval = window.setInterval(() => void runSync('Synced'), 45_000)
+    return () => {
+      document.removeEventListener('visibilitychange', onVisible)
+      window.clearInterval(interval)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  function schedulePush(next: ProgressStore) {
+    if (!isSyncConfigured()) return
+    if (pushTimer.current) window.clearTimeout(pushTimer.current)
+    pushTimer.current = window.setTimeout(() => {
+      const code = ensureSyncCode()
+      void syncNow(next)
+        .then((merged) => {
+          // Only update if remote had something newer to merge in
+          setProgress(merged)
+          saveProgress(merged)
+          setSyncStatus('Synced')
+          setSyncCodeState(code)
+        })
+        .catch(() => setSyncStatus('Sync failed'))
+    }, 600)
+  }
 
   const groups: WordGroup[] = useMemo(
     () => (words ? buildGroups(words) : []),
@@ -40,12 +105,41 @@ export default function App() {
   function updateProgress(next: ProgressStore) {
     setProgress(next)
     saveProgress(next)
+    schedulePush(next)
   }
 
   function clearProgress() {
-    const empty = { words: {} }
+    const empty = emptyProgress()
     setProgress(empty)
     saveProgress(empty)
+    schedulePush(empty)
+  }
+
+  function linkDevice(code: string) {
+    const normalized = code.trim().toUpperCase()
+    if (!normalized) return
+    setSyncCode(normalized)
+    setSyncCodeState(normalized)
+    // Merge this device's local with the linked cloud progress
+    void (async () => {
+      try {
+        setSyncStatus('Linking…')
+        const merged = await syncNow(progressRef.current)
+        setProgress(merged)
+        saveProgress(merged)
+        setSyncStatus('Linked & synced')
+      } catch (e) {
+        console.error(e)
+        setSyncStatus('Link failed')
+      }
+    })()
+  }
+
+  function resetSyncCode() {
+    clearSyncCode()
+    const code = ensureSyncCode()
+    setSyncCodeState(code)
+    void runSync('New code ready')
   }
 
   function findGroup(groupId: string): WordGroup | undefined {
@@ -63,6 +157,12 @@ export default function App() {
     onStudy: (groupId: string, mode: StudyMode) =>
       setScreen({ name: 'study', groupId, mode }),
     onClearProgress: clearProgress,
+    syncCode,
+    syncStatus,
+    syncEnabled: isSyncConfigured(),
+    onLinkDevice: linkDevice,
+    onSyncNow: () => void runSync('Synced'),
+    onNewSyncCode: resetSyncCode,
   }
 
   if (error) {

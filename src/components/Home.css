@@ -179,3 +179,72 @@
 .group-count-hard {
   color: var(--warn);
 }
+
+.sync-panel {
+  margin-bottom: 0.85rem;
+}
+
+.sync-card {
+  border-color: color-mix(in srgb, var(--info) 35%, var(--border));
+}
+
+.sync-code-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.sync-code {
+  flex: 1;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.75rem;
+  background: var(--surface-2);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.sync-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.link-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.link-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.link-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.link-input {
+  flex: 1;
+  min-width: 0;
+  border: 1.5px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.link-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: transparent;
+}

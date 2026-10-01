@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { WordGroup, ProgressStore } from '../types'
 import { countByStatus, getWordProgress } from '../lib/progress'
 import './Home.css'
@@ -9,6 +10,12 @@ interface HomeProps {
   totalWords: number
   onStudy: (groupId: string, mode: 'learn' | 'revise') => void
   onClearProgress: () => void
+  syncCode: string
+  syncStatus: string
+  syncEnabled: boolean
+  onLinkDevice: (code: string) => void
+  onSyncNow: () => void
+  onNewSyncCode: () => void
 }
 
 export function Home({
@@ -18,12 +25,31 @@ export function Home({
   totalWords,
   onStudy,
   onClearProgress,
+  syncCode,
+  syncStatus,
+  syncEnabled,
+  onLinkDevice,
+  onSyncNow,
+  onNewSyncCode,
 }: HomeProps) {
+  const [linkInput, setLinkInput] = useState('')
+  const [copied, setCopied] = useState(false)
+
   const overallMastered = groups.reduce((sum, g) => {
     return sum + countByStatus(progress, g.wordIds).mastered
   }, 0)
 
   const hardCount = masterGroup?.wordIds.length ?? 0
+
+  async function copyCode() {
+    try {
+      await navigator.clipboard.writeText(syncCode)
+      setCopied(true)
+      window.setTimeout(() => setCopied(false), 1500)
+    } catch {
+      window.prompt('Copy this sync code:', syncCode)
+    }
+  }
 
   return (
     <div className="home">
@@ -52,7 +78,7 @@ export function Home({
           onClick={() => {
             if (
               window.confirm(
-                'Clear all progress on this device? This cannot be undone.',
+                'Clear all progress on this device and in the cloud for this sync code? This cannot be undone.',
               )
             ) {
               onClearProgress()
@@ -62,6 +88,80 @@ export function Home({
           Clear progress
         </button>
       </header>
+
+      {syncEnabled && (
+        <section className="sync-panel" aria-label="Device sync">
+          <div className="group-card sync-card">
+            <div className="group-card-top">
+              <div>
+                <h2>Phone ↔ Laptop sync</h2>
+                <p className="group-meta">
+                  Same code on both devices keeps progress together. Status:{' '}
+                  <strong>{syncStatus}</strong>
+                </p>
+              </div>
+            </div>
+            <div className="sync-code-row">
+              <code className="sync-code">{syncCode || '—'}</code>
+              <button type="button" className="btn btn-secondary" onClick={copyCode}>
+                {copied ? 'Copied' : 'Copy'}
+              </button>
+            </div>
+            <div className="sync-actions">
+              <button type="button" className="btn btn-ghost" onClick={onSyncNow}>
+                Sync now
+              </button>
+              <button
+                type="button"
+                className="btn btn-ghost"
+                onClick={() => {
+                  if (
+                    window.confirm(
+                      'Create a new sync code? This device will stop sharing the old code.',
+                    )
+                  ) {
+                    onNewSyncCode()
+                  }
+                }}
+              >
+                New code
+              </button>
+            </div>
+            <form
+              className="link-form"
+              onSubmit={(e) => {
+                e.preventDefault()
+                if (linkInput.trim()) {
+                  onLinkDevice(linkInput)
+                  setLinkInput('')
+                }
+              }}
+            >
+              <label htmlFor="link-code" className="link-label">
+                Other device already has a code? Paste it here
+              </label>
+              <div className="link-row">
+                <input
+                  id="link-code"
+                  className="link-input"
+                  placeholder="GRE-XXXX-XXXX"
+                  value={linkInput}
+                  onChange={(e) => setLinkInput(e.target.value)}
+                  autoCapitalize="characters"
+                  autoCorrect="off"
+                />
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={!linkInput.trim()}
+                >
+                  Link
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      )}
 
       <section className="master-revision" aria-label="Master revision">
         <div className={`group-card master-card${hardCount === 0 ? ' is-empty' : ''}`}>
