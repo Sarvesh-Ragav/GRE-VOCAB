@@ -1,6 +1,11 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import type { ProgressStore, WordProgress, WordStatus } from '../types'
 import { emptyProgress } from './progress'
+import {
+  persistSyncCode,
+  restoreSyncCode,
+  wordCount,
+} from './storage'
 
 const SYNC_CODE_KEY = 'gre-vocab-sync-code-v1'
 
@@ -20,6 +25,12 @@ export function isSyncConfigured(): boolean {
   )
 }
 
+function envDefaultSyncCode(): string | null {
+  const raw = import.meta.env.VITE_DEFAULT_SYNC_CODE as string | undefined
+  if (!raw?.trim()) return null
+  return raw.trim().toUpperCase()
+}
+
 export function getSyncCode(): string | null {
   try {
     return localStorage.getItem(SYNC_CODE_KEY)
@@ -29,11 +40,21 @@ export function getSyncCode(): string | null {
 }
 
 export function setSyncCode(code: string): void {
-  localStorage.setItem(SYNC_CODE_KEY, code.trim().toUpperCase())
+  const normalized = code.trim().toUpperCase()
+  try {
+    localStorage.setItem(SYNC_CODE_KEY, normalized)
+  } catch {
+    /* ignore */
+  }
+  void persistSyncCode(normalized)
 }
 
 export function clearSyncCode(): void {
-  localStorage.removeItem(SYNC_CODE_KEY)
+  try {
+    localStorage.removeItem(SYNC_CODE_KEY)
+  } catch {
+    /* ignore */
+  }
 }
 
 export function generateSyncCode(): string {
@@ -41,8 +62,35 @@ export function generateSyncCode(): string {
   return `GRE-${part()}-${part()}`
 }
 
-/** Ensure this device has a sync code (create one if missing). */
+/**
+ * Resolve sync code without inventing a new one when storage was wiped.
+ * Prefers: env default → localStorage → IndexedDB → (only then) generate.
+ */
+export async function resolveSyncCode(): Promise<string> {
+  const fromEnv = envDefaultSyncCode()
+  if (fromEnv) {
+    setSyncCode(fromEnv)
+    return fromEnv
+  }
+
+  const existing = getSyncCode() ?? (await restoreSyncCode())
+  if (existing) {
+    setSyncCode(existing)
+    return existing
+  }
+
+  const code = generateSyncCode()
+  setSyncCode(code)
+  return code
+}
+
+/** @deprecated use resolveSyncCode — kept for sync call sites that need sync */
 export function ensureSyncCode(): string {
+  const fromEnv = envDefaultSyncCode()
+  if (fromEnv) {
+    setSyncCode(fromEnv)
+    return fromEnv
+  }
   const existing = getSyncCode()
   if (existing) return existing
   const code = generateSyncCode()
@@ -125,11 +173,37 @@ export async function pushProgress(
   if (error) throw error
 }
 
-/** Pull remote, merge with local, push merged result. Returns merged store. */
-export async function syncNow(local: ProgressStore): Promise<ProgressStore> {
-  const code = ensureSyncCode()
+export interface SyncOptions {
+  /** Allow uploading empty progress (only for explicit Clear). */
+  allowEmptyPush?: boolean
+}
+
+/**
+ * Pull remote, merge with local, push merged result.
+ * Never overwrites a non-empty cloud save with empty local data
+ * unless allowEmptyPush is true.
+ */
+export async function syncNow(
+  local: ProgressStore,
+  options: SyncOptions = {},
+): Promise<ProgressStore> {
+  const code = await resolveSyncCode()
   const remote = await pullProgress(code)
   const merged = remote ? mergeProgress(local, remote) : local
+
+  const mergedEmpty = wordCount(merged) === 0
+  const remoteHasData = remote != null && wordCount(remote) > 0
+
+  if (mergedEmpty && remoteHasData && !options.allowEmptyPush) {
+    // Keep cloud data; do not wipe
+    return remote!
+  }
+
+  if (mergedEmpty && !options.allowEmptyPush && !remote) {
+    // Nothing anywhere — skip creating an empty cloud row
+    return merged
+  }
+
   await pushProgress(code, merged)
   return merged
 }

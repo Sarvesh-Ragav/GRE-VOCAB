@@ -96,8 +96,8 @@ export function Home({
               <div>
                 <h2>Phone ↔ Laptop sync</h2>
                 <p className="group-meta">
-                  Same code on both devices keeps progress together. Status:{' '}
-                  <strong>{syncStatus}</strong>
+                  Progress is saved in the cloud with this code. Keep the same
+                  code on phone and laptop. Status: <strong>{syncStatus}</strong>
                 </p>
               </div>
             </div>
