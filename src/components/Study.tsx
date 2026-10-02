@@ -45,7 +45,6 @@ export function Study({
   const [phase, setPhase] = useState<Phase>(initialQueue.length ? 'prompt' : 'done')
   const [draft, setDraft] = useState('')
   const [usedHelp, setUsedHelp] = useState(false)
-  const [showClue, setShowClue] = useState(false)
   const [options, setOptions] = useState<string[]>([])
   const [seenCount, setSeenCount] = useState(0)
   const [preGradedMiss, setPreGradedMiss] = useState(false)
@@ -62,7 +61,6 @@ export function Study({
   function resetCardUi() {
     setDraft('')
     setUsedHelp(false)
-    setShowClue(false)
     setOptions([])
     setPreGradedMiss(false)
     setPendingQueue(null)
@@ -101,11 +99,6 @@ export function Study({
     setUsedHelp(true)
     setOptions(pickMeaningOptions(current, groupWords))
     setPhase('options')
-  }
-
-  function peekClue() {
-    setShowClue(true)
-    setUsedHelp(true)
   }
 
   function submitGuess() {
@@ -184,9 +177,6 @@ export function Study({
     )
   }
 
-  const clue = current.clue || current.meaning.split(/[;.]/)[0]
-  const example = current.example || ''
-
   return (
     <div className="study">
       <header className="study-top">
@@ -212,21 +202,6 @@ export function Study({
           <p className="study-label">What does this mean?</p>
           <h1 className="study-word">{current.word}</h1>
         </div>
-
-        {(phase === 'prompt' || phase === 'typing') && (
-          <div className="study-assist">
-            {showClue ? (
-              <div className="info-card clue-card">
-                <span className="reveal-label">Clue</span>
-                <p>{clue}</p>
-              </div>
-            ) : (
-              <button type="button" className="btn btn-ghost clue-peek" onClick={peekClue}>
-                Peek clue
-              </button>
-            )}
-          </div>
-        )}
 
         {phase === 'prompt' && (
           <div className="study-actions">
@@ -334,16 +309,6 @@ export function Study({
               <span className="reveal-label">Meaning</span>
               <p>{current.meaning}</p>
             </div>
-            <div className="info-card clue-card">
-              <span className="reveal-label">Clue</span>
-              <p>{clue}</p>
-            </div>
-            {example && (
-              <div className="info-card example-card">
-                <span className="reveal-label">Example</span>
-                <p>{example}</p>
-              </div>
-            )}
 
             {preGradedMiss ? (
               <button

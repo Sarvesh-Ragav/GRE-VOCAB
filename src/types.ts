@@ -4,8 +4,8 @@ export interface VocabWord {
   id: number
   word: string
   meaning: string
-  clue: string
-  example: string
+  clue?: string
+  example?: string
 }
 
 export interface WordProgress {
