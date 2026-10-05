@@ -6,7 +6,7 @@ import {
   buildGroups,
   buildMasterRevisionGroup,
 } from './lib/groups'
-import { emptyProgress, loadProgress, saveProgress } from './lib/progress'
+import { emptyProgress, loadProgress, saveProgress, clearProgressForIds } from './lib/progress'
 import { persistProgress, restoreProgress, wordCount } from './lib/storage'
 import {
   clearSyncCode,
@@ -180,6 +180,14 @@ export default function App() {
     schedulePush(empty, true)
   }
 
+  function clearFocusProgress() {
+    if (!focusGroup) return
+    const next = clearProgressForIds(progressRef.current, focusGroup.wordIds)
+    setProgress(next)
+    void saveAll(next)
+    schedulePush(next, false)
+  }
+
   function linkDevice(code: string) {
     const normalized = code.trim().toUpperCase()
     if (!normalized) return
@@ -234,6 +242,7 @@ export default function App() {
     onStudy: (groupId: string, mode: StudyMode) =>
       setScreen({ name: 'study', groupId, mode }),
     onClearProgress: clearProgress,
+    onClearFocusProgress: clearFocusProgress,
     syncCode,
     syncStatus,
     syncEnabled: isSyncConfigured(),

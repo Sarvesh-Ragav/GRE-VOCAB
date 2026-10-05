@@ -74,3 +74,15 @@ export function countByStatus(
   }
   return counts
 }
+
+/** Reset progress for specific word IDs only (other words unchanged). */
+export function clearProgressForIds(
+  store: ProgressStore,
+  wordIds: number[],
+): ProgressStore {
+  const next = { ...store.words }
+  for (const id of wordIds) {
+    delete next[String(id)]
+  }
+  return { words: next }
+}

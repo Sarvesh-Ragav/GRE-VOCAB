@@ -11,6 +11,7 @@ interface HomeProps {
   totalWords: number
   onStudy: (groupId: string, mode: 'learn' | 'revise') => void
   onClearProgress: () => void
+  onClearFocusProgress: () => void
   syncCode: string
   syncStatus: string
   syncEnabled: boolean
@@ -27,6 +28,7 @@ export function Home({
   totalWords,
   onStudy,
   onClearProgress,
+  onClearFocusProgress,
   syncCode,
   syncStatus,
   syncEnabled,
@@ -242,6 +244,26 @@ export function Home({
                 Revise
               </button>
             </div>
+            <button
+              type="button"
+              className="clear-progress clear-focus"
+              disabled={
+                focusStats.mastered === 0 &&
+                focusStats.known === 0 &&
+                focusStats.learning === 0
+              }
+              onClick={() => {
+                if (
+                  window.confirm(
+                    'Clear Focus list progress only? Other groups stay unchanged.',
+                  )
+                ) {
+                  onClearFocusProgress()
+                }
+              }}
+            >
+              Clear Focus progress
+            </button>
           </div>
         </section>
       )}

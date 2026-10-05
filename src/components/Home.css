@@ -56,6 +56,16 @@
   align-self: flex-start;
 }
 
+.clear-progress:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.clear-focus {
+  margin-top: 0.35rem;
+  padding-top: 0.25rem;
+}
+
 .home-overall-bar {
   height: 0.45rem;
   border-radius: 999px;
