@@ -1,15 +1,21 @@
 import type { ProgressStore, VocabWord, WordGroup } from '../types'
-import { MASTER_REVISION_ID } from '../types'
+import { FOCUS_GROUP_ID, MASTER_REVISION_ID } from '../types'
 import { getWordProgress } from './progress'
 import { isHardWord } from './mastery'
 
 const TARGET_SIZE = 50
 
-/** Split alphabetically sorted words into groups of ~50. */
+function isFocusWord(w: VocabWord): boolean {
+  return w.set === 'focus'
+}
+
+/** Split alphabetically sorted Manhattan words into groups of ~50. */
 export function buildGroups(words: VocabWord[]): WordGroup[] {
-  const sorted = [...words].sort((a, b) =>
-    a.word.localeCompare(b.word, undefined, { sensitivity: 'base' }),
-  )
+  const sorted = [...words]
+    .filter((w) => !isFocusWord(w))
+    .sort((a, b) =>
+      a.word.localeCompare(b.word, undefined, { sensitivity: 'base' }),
+    )
 
   const groups: WordGroup[] = []
   for (let i = 0; i < sorted.length; i += TARGET_SIZE) {
@@ -27,6 +33,23 @@ export function buildGroups(words: VocabWord[]): WordGroup[] {
     })
   }
   return groups
+}
+
+/** Curated focus list (missing words from your study sheet). */
+export function buildFocusGroup(words: VocabWord[]): WordGroup {
+  const focus = words
+    .filter(isFocusWord)
+    .sort((a, b) =>
+      a.word.localeCompare(b.word, undefined, { sensitivity: 'base' }),
+    )
+
+  return {
+    id: FOCUS_GROUP_ID,
+    label: 'Focus list',
+    letterRange: 'Your extra words',
+    wordIds: focus.map((w) => w.id),
+    kind: 'focus',
+  }
 }
 
 /**

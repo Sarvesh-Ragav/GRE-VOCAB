@@ -180,6 +180,23 @@
   color: var(--warn);
 }
 
+.focus-list {
+  margin: 0.85rem 0 0.25rem;
+}
+
+.focus-card {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--accent) 10%, var(--surface)) 0%,
+    var(--surface) 55%
+  );
+}
+
+.group-count-focus {
+  color: var(--accent);
+}
+
 .sync-panel {
   margin-bottom: 0.85rem;
 }

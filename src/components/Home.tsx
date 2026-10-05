@@ -6,6 +6,7 @@ import './Home.css'
 interface HomeProps {
   groups: WordGroup[]
   masterGroup: WordGroup | null
+  focusGroup: WordGroup | null
   progress: ProgressStore
   totalWords: number
   onStudy: (groupId: string, mode: 'learn' | 'revise') => void
@@ -21,6 +22,7 @@ interface HomeProps {
 export function Home({
   groups,
   masterGroup,
+  focusGroup,
   progress,
   totalWords,
   onStudy,
@@ -35,11 +37,17 @@ export function Home({
   const [linkInput, setLinkInput] = useState('')
   const [copied, setCopied] = useState(false)
 
-  const overallMastered = groups.reduce((sum, g) => {
-    return sum + countByStatus(progress, g.wordIds).mastered
-  }, 0)
+  const allTrackedIds = [
+    ...groups.flatMap((g) => g.wordIds),
+    ...(focusGroup?.wordIds ?? []),
+  ]
+  const overallMastered = countByStatus(progress, allTrackedIds).mastered
 
   const hardCount = masterGroup?.wordIds.length ?? 0
+  const focusCount = focusGroup?.wordIds.length ?? 0
+  const focusStats = focusGroup
+    ? countByStatus(progress, focusGroup.wordIds)
+    : null
 
   async function copyCode() {
     try {
@@ -193,6 +201,50 @@ export function Home({
           </div>
         </div>
       </section>
+
+      {focusGroup && focusCount > 0 && focusStats && (
+        <section className="focus-list" aria-label="Focus list">
+          <div className="group-card focus-card">
+            <div className="group-card-top">
+              <div>
+                <h2>Focus list</h2>
+                <p className="group-meta">
+                  Extra words from your list that weren’t in the original set ·{' '}
+                  {focusCount} words
+                </p>
+              </div>
+              <span className="group-count group-count-focus">
+                {focusStats.mastered}/{focusCount}
+              </span>
+            </div>
+            <div className="group-stats">
+              <span data-tone="learning">
+                {focusStats.learning + focusStats.new} to learn
+              </span>
+              <span data-tone="known">{focusStats.known} confirm</span>
+              <span data-tone="mastered">{focusStats.mastered} done</span>
+            </div>
+            <div className="group-actions">
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() => onStudy(focusGroup.id, 'learn')}
+                disabled={focusStats.remaining === 0}
+              >
+                {focusStats.remaining === 0 ? 'All mastered' : 'Study'}
+              </button>
+              <button
+                type="button"
+                className="btn btn-ghost"
+                onClick={() => onStudy(focusGroup.id, 'revise')}
+                disabled={focusStats.mastered === 0}
+              >
+                Revise
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
 
       <h3 className="section-label">Groups</h3>
       <ul className="group-list">

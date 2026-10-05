@@ -1,7 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ProgressStore, StudyMode, VocabWord, WordGroup } from './types'
-import { MASTER_REVISION_ID } from './types'
-import { buildGroups, buildMasterRevisionGroup } from './lib/groups'
+import { FOCUS_GROUP_ID, MASTER_REVISION_ID } from './types'
+import {
+  buildFocusGroup,
+  buildGroups,
+  buildMasterRevisionGroup,
+} from './lib/groups'
 import { emptyProgress, loadProgress, saveProgress } from './lib/progress'
 import { persistProgress, restoreProgress, wordCount } from './lib/storage'
 import {
@@ -153,6 +157,11 @@ export default function App() {
     [words],
   )
 
+  const focusGroup: WordGroup | null = useMemo(
+    () => (words ? buildFocusGroup(words) : null),
+    [words],
+  )
+
   const masterGroup: WordGroup | null = useMemo(
     () => (words ? buildMasterRevisionGroup(words, progress) : null),
     [words, progress],
@@ -210,12 +219,16 @@ export default function App() {
     if (groupId === MASTER_REVISION_ID) {
       return masterGroup ?? undefined
     }
+    if (groupId === FOCUS_GROUP_ID) {
+      return focusGroup ?? undefined
+    }
     return groups.find((g) => g.id === groupId)
   }
 
   const homeProps = {
     groups,
     masterGroup,
+    focusGroup,
     progress,
     totalWords: words?.length ?? 0,
     onStudy: (groupId: string, mode: StudyMode) =>

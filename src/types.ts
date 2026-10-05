@@ -6,6 +6,8 @@ export interface VocabWord {
   meaning: string
   clue?: string
   example?: string
+  /** manhattan = original PDF list; focus = separate curated group */
+  set?: 'manhattan' | 'focus'
 }
 
 export interface WordProgress {
@@ -27,11 +29,12 @@ export interface WordGroup {
   label: string
   letterRange: string
   wordIds: number[]
-  /** Cross-group hard-word pool */
-  kind?: 'standard' | 'master-revision'
+  /** Cross-group hard-word pool or curated focus list */
+  kind?: 'standard' | 'master-revision' | 'focus'
 }
 
 export const MASTER_REVISION_ID = 'master-revision'
+export const FOCUS_GROUP_ID = 'focus-list'
 /** Miss / don't know more than twice → master revision pool */
 export const HARD_MISS_THRESHOLD = 2
 
