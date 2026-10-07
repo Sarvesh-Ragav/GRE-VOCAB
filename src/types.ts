@@ -6,8 +6,10 @@ export interface VocabWord {
   meaning: string
   clue?: string
   example?: string
-  /** manhattan = original PDF list; focus = separate curated group */
-  set?: 'manhattan' | 'focus'
+  mnemonic?: string
+  pos?: string
+  /** manhattan = PDF; focus = extra sheet; book = GRE_Verbal_Vocabulary xlsx */
+  set?: 'manhattan' | 'focus' | 'book'
 }
 
 export interface WordProgress {
@@ -29,8 +31,7 @@ export interface WordGroup {
   label: string
   letterRange: string
   wordIds: number[]
-  /** Cross-group hard-word pool or curated focus list */
-  kind?: 'standard' | 'master-revision' | 'focus'
+  kind?: 'standard' | 'master-revision' | 'focus' | 'book'
 }
 
 export const MASTER_REVISION_ID = 'master-revision'

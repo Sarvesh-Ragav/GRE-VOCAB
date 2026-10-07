@@ -5,6 +5,7 @@ import './Home.css'
 
 interface HomeProps {
   groups: WordGroup[]
+  bookGroups: WordGroup[]
   masterGroup: WordGroup | null
   focusGroup: WordGroup | null
   progress: ProgressStore
@@ -12,6 +13,7 @@ interface HomeProps {
   onStudy: (groupId: string, mode: 'learn' | 'revise') => void
   onClearProgress: () => void
   onClearFocusProgress: () => void
+  onClearBookProgress: () => void
   syncCode: string
   syncStatus: string
   syncEnabled: boolean
@@ -22,6 +24,7 @@ interface HomeProps {
 
 export function Home({
   groups,
+  bookGroups,
   masterGroup,
   focusGroup,
   progress,
@@ -29,6 +32,7 @@ export function Home({
   onStudy,
   onClearProgress,
   onClearFocusProgress,
+  onClearBookProgress,
   syncCode,
   syncStatus,
   syncEnabled,
@@ -41,6 +45,7 @@ export function Home({
 
   const allTrackedIds = [
     ...groups.flatMap((g) => g.wordIds),
+    ...bookGroups.flatMap((g) => g.wordIds),
     ...(focusGroup?.wordIds ?? []),
   ]
   const overallMastered = countByStatus(progress, allTrackedIds).mastered
@@ -50,6 +55,9 @@ export function Home({
   const focusStats = focusGroup
     ? countByStatus(progress, focusGroup.wordIds)
     : null
+  const bookIds = bookGroups.flatMap((g) => g.wordIds)
+  const bookStats =
+    bookIds.length > 0 ? countByStatus(progress, bookIds) : null
 
   async function copyCode() {
     try {
@@ -265,6 +273,82 @@ export function Home({
               Clear Focus progress
             </button>
           </div>
+        </section>
+      )}
+
+      {bookGroups.length > 0 && bookStats && (
+        <section className="book-vocab" aria-label="Book vocabulary">
+          <div className="section-head">
+            <h3 className="section-label">Book vocabulary</h3>
+            <button
+              type="button"
+              className="clear-progress"
+              disabled={
+                bookStats.mastered === 0 &&
+                bookStats.known === 0 &&
+                bookStats.learning === 0
+              }
+              onClick={() => {
+                if (
+                  window.confirm(
+                    'Clear all Book vocabulary progress? Other groups stay unchanged.',
+                  )
+                ) {
+                  onClearBookProgress()
+                }
+              }}
+            >
+              Clear Book progress
+            </button>
+          </div>
+          <p className="section-note">
+            From your Excel sheet — reveals meaning, mnemonic, and example ·{' '}
+            {bookStats.mastered}/{bookIds.length} mastered
+          </p>
+          <ul className="group-list">
+            {bookGroups.map((g) => {
+              const c = countByStatus(progress, g.wordIds)
+              const done = c.mastered === g.wordIds.length
+              return (
+                <li key={g.id} className={`group-card book-card${done ? ' is-done' : ''}`}>
+                  <div className="group-card-top">
+                    <div>
+                      <h2>{g.label}</h2>
+                      <p className="group-meta">
+                        Letters {g.letterRange} · {g.wordIds.length} words
+                      </p>
+                    </div>
+                    <span className="group-count group-count-book">
+                      {c.mastered}/{g.wordIds.length}
+                    </span>
+                  </div>
+                  <div className="group-stats">
+                    <span data-tone="learning">{c.learning + c.new} to learn</span>
+                    <span data-tone="known">{c.known} confirm</span>
+                    <span data-tone="mastered">{c.mastered} done</span>
+                  </div>
+                  <div className="group-actions">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      onClick={() => onStudy(g.id, 'learn')}
+                      disabled={c.remaining === 0}
+                    >
+                      {c.remaining === 0 ? 'All mastered' : 'Study'}
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-ghost"
+                      onClick={() => onStudy(g.id, 'revise')}
+                      disabled={c.mastered === 0}
+                    >
+                      Revise
+                    </button>
+                  </div>
+                </li>
+              )
+            })}
+          </ul>
         </section>
       )}
 

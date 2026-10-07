@@ -5,14 +5,14 @@ import { isHardWord } from './mastery'
 
 const TARGET_SIZE = 50
 
-function isFocusWord(w: VocabWord): boolean {
-  return w.set === 'focus'
+function isSpecialSet(w: VocabWord): boolean {
+  return w.set === 'focus' || w.set === 'book'
 }
 
 /** Split alphabetically sorted Manhattan words into groups of ~50. */
 export function buildGroups(words: VocabWord[]): WordGroup[] {
   const sorted = [...words]
-    .filter((w) => !isFocusWord(w))
+    .filter((w) => !isSpecialSet(w))
     .sort((a, b) =>
       a.word.localeCompare(b.word, undefined, { sensitivity: 'base' }),
     )
@@ -38,7 +38,7 @@ export function buildGroups(words: VocabWord[]): WordGroup[] {
 /** Curated focus list (missing words from your study sheet). */
 export function buildFocusGroup(words: VocabWord[]): WordGroup {
   const focus = words
-    .filter(isFocusWord)
+    .filter((w) => w.set === 'focus')
     .sort((a, b) =>
       a.word.localeCompare(b.word, undefined, { sensitivity: 'base' }),
     )
@@ -52,9 +52,34 @@ export function buildFocusGroup(words: VocabWord[]): WordGroup {
   }
 }
 
+/** Book vocabulary from GRE_Verbal_Vocabulary xlsx — chunks of ~50. */
+export function buildBookGroups(words: VocabWord[]): WordGroup[] {
+  const sorted = words
+    .filter((w) => w.set === 'book')
+    .sort((a, b) =>
+      a.word.localeCompare(b.word, undefined, { sensitivity: 'base' }),
+    )
+
+  const groups: WordGroup[] = []
+  for (let i = 0; i < sorted.length; i += TARGET_SIZE) {
+    const chunk = sorted.slice(i, i + TARGET_SIZE)
+    const first = chunk[0].word[0].toUpperCase()
+    const last = chunk[chunk.length - 1].word[0].toUpperCase()
+    const letterRange = first === last ? first : `${first}–${last}`
+    const n = groups.length + 1
+    groups.push({
+      id: `book-${n}`,
+      label: `Book ${n}`,
+      letterRange,
+      wordIds: chunk.map((w) => w.id),
+      kind: 'book',
+    })
+  }
+  return groups
+}
+
 /**
  * Cross-group pool: missed / don't-know more than twice, not yet mastered.
- * Used for Master revision.
  */
 export function buildMasterRevisionGroup(
   words: VocabWord[],

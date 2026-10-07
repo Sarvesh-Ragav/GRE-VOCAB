@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ProgressStore, StudyMode, VocabWord, WordGroup } from './types'
 import { FOCUS_GROUP_ID, MASTER_REVISION_ID } from './types'
 import {
+  buildBookGroups,
   buildFocusGroup,
   buildGroups,
   buildMasterRevisionGroup,
@@ -157,6 +158,11 @@ export default function App() {
     [words],
   )
 
+  const bookGroups: WordGroup[] = useMemo(
+    () => (words ? buildBookGroups(words) : []),
+    [words],
+  )
+
   const focusGroup: WordGroup | null = useMemo(
     () => (words ? buildFocusGroup(words) : null),
     [words],
@@ -183,6 +189,15 @@ export default function App() {
   function clearFocusProgress() {
     if (!focusGroup) return
     const next = clearProgressForIds(progressRef.current, focusGroup.wordIds)
+    setProgress(next)
+    void saveAll(next)
+    schedulePush(next, false)
+  }
+
+  function clearBookProgress() {
+    const ids = bookGroups.flatMap((g) => g.wordIds)
+    if (ids.length === 0) return
+    const next = clearProgressForIds(progressRef.current, ids)
     setProgress(next)
     void saveAll(next)
     schedulePush(next, false)
@@ -230,11 +245,15 @@ export default function App() {
     if (groupId === FOCUS_GROUP_ID) {
       return focusGroup ?? undefined
     }
-    return groups.find((g) => g.id === groupId)
+    return (
+      groups.find((g) => g.id === groupId) ??
+      bookGroups.find((g) => g.id === groupId)
+    )
   }
 
   const homeProps = {
     groups,
+    bookGroups,
     masterGroup,
     focusGroup,
     progress,
@@ -243,6 +262,7 @@ export default function App() {
       setScreen({ name: 'study', groupId, mode }),
     onClearProgress: clearProgress,
     onClearFocusProgress: clearFocusProgress,
+    onClearBookProgress: clearBookProgress,
     syncCode,
     syncStatus,
     syncEnabled: isSyncConfigured(),

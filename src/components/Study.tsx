@@ -309,6 +309,18 @@ export function Study({
               <span className="reveal-label">Meaning</span>
               <p>{current.meaning}</p>
             </div>
+            {current.mnemonic && (
+              <div className="info-card mnemonic-card">
+                <span className="reveal-label">Mnemonic</span>
+                <p>{current.mnemonic}</p>
+              </div>
+            )}
+            {current.example && (
+              <div className="info-card example-card">
+                <span className="reveal-label">Example</span>
+                <p>{current.example}</p>
+              </div>
+            )}
 
             {preGradedMiss ? (
               <button

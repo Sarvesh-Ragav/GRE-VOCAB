@@ -207,6 +207,37 @@
   color: var(--accent);
 }
 
+.book-vocab {
+  margin: 1rem 0 0.25rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.15rem;
+}
+
+.section-head .section-label {
+  margin: 0;
+}
+
+.section-note {
+  margin: 0 0 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.book-card {
+  border-color: color-mix(in srgb, var(--info) 35%, var(--border));
+}
+
+.group-count-book {
+  color: var(--info);
+}
+
 .sync-panel {
   margin-bottom: 0.85rem;
 }

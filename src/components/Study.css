@@ -186,13 +186,32 @@
 .correct-answer {
   border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
   background: color-mix(in srgb, var(--accent) 8%, var(--surface));
-  padding: 1rem 1.1rem;
+  padding: 1.1rem 1.15rem;
+}
+
+.correct-answer .reveal-label {
+  font-size: 0.75rem;
+  margin-bottom: 0.35rem;
 }
 
 .correct-answer p {
-  font-size: clamp(1.15rem, 4.2vw, 1.35rem);
-  line-height: 1.5;
-  font-weight: 500;
+  font-size: clamp(1.25rem, 4.8vw, 1.5rem);
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.mnemonic-card {
+  border-color: color-mix(in srgb, var(--info) 40%, var(--border));
+  background: color-mix(in srgb, var(--info) 8%, var(--surface));
+}
+
+.example-card {
+  border-color: color-mix(in srgb, var(--warn) 35%, var(--border));
+  background: color-mix(in srgb, var(--warn) 7%, var(--surface));
+}
+
+.example-card p {
+  font-style: italic;
 }
 
 .grade-row {
