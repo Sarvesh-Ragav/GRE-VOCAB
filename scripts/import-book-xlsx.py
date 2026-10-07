@@ -30,7 +30,7 @@ def main() -> None:
         root = ET.fromstring(z.read("xl/worksheets/sheet1.xml"))
         rows = root.findall("m:sheetData/m:row", NS)
 
-    book_words: list[tuple[str, str, str, str, str]] = []
+    book_words: list[tuple[str, str, str, str, str, int]] = []
     for i, row in enumerate(rows):
         if i == 0:
             continue
@@ -40,19 +40,27 @@ def main() -> None:
         mnemonic = (data.get("E") or "").strip()
         example = (data.get("F") or "").strip()
         pos = (data.get("C") or "").strip()
+        try:
+            times_seen = int(float(data.get("G") or "0"))
+        except ValueError:
+            times_seen = 0
         if not word or not meaning:
             continue
-        book_words.append((word, meaning, mnemonic, example, pos))
+        book_words.append((word, meaning, mnemonic, example, pos, times_seen))
+
+    # Highest frequency first so Book 1 = most-seen words
+    book_words.sort(key=lambda t: (-t[5], t[0].lower()))
 
     vocab = [w for w in json.loads(VOCAB.read_text()) if w.get("set") != "book"]
     start = max(w["id"] for w in vocab) + 1
     new = []
-    for i, (word, meaning, mnemonic, example, pos) in enumerate(book_words):
+    for i, (word, meaning, mnemonic, example, pos, times_seen) in enumerate(book_words):
         item: dict = {
             "id": start + i,
             "word": word,
             "meaning": meaning,
             "set": "book",
+            "timesSeen": times_seen,
         }
         if mnemonic:
             item["mnemonic"] = mnemonic
@@ -63,7 +71,11 @@ def main() -> None:
         new.append(item)
 
     VOCAB.write_text(json.dumps(vocab + new, indent=2, ensure_ascii=False) + "\n")
-    print(f"Imported {len(new)} book words → {VOCAB}")
+    freqs = [t[5] for t in book_words]
+    print(
+        f"Imported {len(new)} book words → {VOCAB} "
+        f"(timesSeen {max(freqs)}→{min(freqs)})"
+    )
 
 
 if __name__ == "__main__":

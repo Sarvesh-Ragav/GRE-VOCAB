@@ -52,20 +52,23 @@ export function buildFocusGroup(words: VocabWord[]): WordGroup {
   }
 }
 
-/** Book vocabulary from GRE_Verbal_Vocabulary xlsx — chunks of ~50. */
+/** Book vocabulary — highest “Times Seen” first, then chunks of ~50. */
 export function buildBookGroups(words: VocabWord[]): WordGroup[] {
   const sorted = words
     .filter((w) => w.set === 'book')
-    .sort((a, b) =>
-      a.word.localeCompare(b.word, undefined, { sensitivity: 'base' }),
-    )
+    .sort((a, b) => {
+      const freq = (b.timesSeen ?? 0) - (a.timesSeen ?? 0)
+      if (freq !== 0) return freq
+      return a.word.localeCompare(b.word, undefined, { sensitivity: 'base' })
+    })
 
   const groups: WordGroup[] = []
   for (let i = 0; i < sorted.length; i += TARGET_SIZE) {
     const chunk = sorted.slice(i, i + TARGET_SIZE)
-    const first = chunk[0].word[0].toUpperCase()
-    const last = chunk[chunk.length - 1].word[0].toUpperCase()
-    const letterRange = first === last ? first : `${first}–${last}`
+    const maxF = Math.max(...chunk.map((w) => w.timesSeen ?? 0))
+    const minF = Math.min(...chunk.map((w) => w.timesSeen ?? 0))
+    const letterRange =
+      maxF === minF ? `Seen ${maxF}×` : `Seen ${maxF}–${minF}×`
     const n = groups.length + 1
     groups.push({
       id: `book-${n}`,

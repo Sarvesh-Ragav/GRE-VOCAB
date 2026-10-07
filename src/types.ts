@@ -8,6 +8,8 @@ export interface VocabWord {
   example?: string
   mnemonic?: string
   pos?: string
+  /** Times seen in book (Excel “Times Seen in Book”) — book set only */
+  timesSeen?: number
   /** manhattan = PDF; focus = extra sheet; book = GRE_Verbal_Vocabulary xlsx */
   set?: 'manhattan' | 'focus' | 'book'
 }

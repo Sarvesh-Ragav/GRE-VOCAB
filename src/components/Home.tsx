@@ -302,8 +302,8 @@ export function Home({
             </button>
           </div>
           <p className="section-note">
-            From your Excel sheet — reveals meaning, mnemonic, and example ·{' '}
-            {bookStats.mastered}/{bookIds.length} mastered
+            Higher frequency first (Times Seen in Book) · meaning, mnemonic,
+            example on reveal · {bookStats.mastered}/{bookIds.length} mastered
           </p>
           <ul className="group-list">
             {bookGroups.map((g) => {
@@ -315,7 +315,7 @@ export function Home({
                     <div>
                       <h2>{g.label}</h2>
                       <p className="group-meta">
-                        Letters {g.letterRange} · {g.wordIds.length} words
+                        {g.letterRange} · {g.wordIds.length} words
                       </p>
                     </div>
                     <span className="group-count group-count-book">
