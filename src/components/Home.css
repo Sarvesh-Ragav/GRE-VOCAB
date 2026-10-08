@@ -159,6 +159,14 @@
   grid-template-columns: 1fr;
 }
 
+.group-actions-triple {
+  grid-template-columns: 1fr 1fr;
+}
+
+.group-actions-triple .btn-ghost {
+  grid-column: 1 / -1;
+}
+
 .section-label {
   font-family: var(--font-ui);
   font-size: 0.75rem;

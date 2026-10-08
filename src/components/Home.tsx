@@ -12,6 +12,7 @@ interface HomeProps {
   totalWords: number
   synonymPackCount: number
   onStudy: (groupId: string, mode: 'learn' | 'revise') => void
+  onMatch: (groupId: string) => void
   onOpenPacks: () => void
   onClearProgress: () => void
   onClearFocusProgress: () => void
@@ -33,6 +34,7 @@ export function Home({
   totalWords,
   synonymPackCount,
   onStudy,
+  onMatch,
   onOpenPacks,
   onClearProgress,
   onClearFocusProgress,
@@ -229,7 +231,7 @@ export function Home({
                 : `${hardCount} word${hardCount === 1 ? '' : 's'} need focused drill`}
             </span>
           </div>
-          <div className="group-actions group-actions-single">
+          <div className="group-actions">
             <button
               type="button"
               className="btn btn-primary"
@@ -237,6 +239,14 @@ export function Home({
               disabled={hardCount === 0}
             >
               {hardCount === 0 ? 'Empty for now' : 'Drill hard words'}
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={() => masterGroup && onMatch(masterGroup.id)}
+              disabled={hardCount === 0}
+            >
+              Match
             </button>
           </div>
         </div>
@@ -264,7 +274,7 @@ export function Home({
               <span data-tone="known">{focusStats.known} confirm</span>
               <span data-tone="mastered">{focusStats.mastered} done</span>
             </div>
-            <div className="group-actions">
+            <div className="group-actions group-actions-triple">
               <button
                 type="button"
                 className="btn btn-primary"
@@ -272,6 +282,14 @@ export function Home({
                 disabled={focusStats.remaining === 0}
               >
                 {focusStats.remaining === 0 ? 'All mastered' : 'Study'}
+              </button>
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={() => onMatch(focusGroup.id)}
+                disabled={focusGroup.wordIds.length === 0}
+              >
+                Match
               </button>
               <button
                 type="button"
@@ -357,7 +375,7 @@ export function Home({
                     <span data-tone="known">{c.known} confirm</span>
                     <span data-tone="mastered">{c.mastered} done</span>
                   </div>
-                  <div className="group-actions">
+                  <div className="group-actions group-actions-triple">
                     <button
                       type="button"
                       className="btn btn-primary"
@@ -365,6 +383,13 @@ export function Home({
                       disabled={c.remaining === 0}
                     >
                       {c.remaining === 0 ? 'All mastered' : 'Study'}
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      onClick={() => onMatch(g.id)}
+                    >
+                      Match
                     </button>
                     <button
                       type="button"
@@ -410,7 +435,7 @@ export function Home({
                 <span data-tone="known">{c.known} confirm</span>
                 <span data-tone="mastered">{c.mastered} done</span>
               </div>
-              <div className="group-actions">
+              <div className="group-actions group-actions-triple">
                 <button
                   type="button"
                   className="btn btn-primary"
@@ -418,6 +443,13 @@ export function Home({
                   disabled={c.remaining === 0}
                 >
                   {c.remaining === 0 ? 'All mastered' : 'Study'}
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={() => onMatch(g.id)}
+                >
+                  Match
                 </button>
                 <button
                   type="button"

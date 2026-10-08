@@ -27,6 +27,7 @@ import {
   syncNow,
 } from './lib/sync'
 import { Home } from './components/Home'
+import { MatchGame } from './components/MatchGame'
 import { Study } from './components/Study'
 import { SynonymPacks } from './components/SynonymPacks'
 import './App.css'
@@ -34,6 +35,7 @@ import './App.css'
 type Screen =
   | { name: 'home' }
   | { name: 'study'; groupId: string; mode: StudyMode }
+  | { name: 'match'; groupId: string }
   | { name: 'packs' }
 
 export default function App() {
@@ -288,6 +290,7 @@ export default function App() {
     synonymPackCount: packs?.length ?? 0,
     onStudy: (groupId: string, mode: StudyMode) =>
       setScreen({ name: 'study', groupId, mode }),
+    onMatch: (groupId: string) => setScreen({ name: 'match', groupId }),
     onOpenPacks: () => setScreen({ name: 'packs' }),
     onClearProgress: clearProgress,
     onClearFocusProgress: clearFocusProgress,
@@ -328,6 +331,23 @@ export default function App() {
         allWords={words}
         progress={progress}
         mode={screen.mode}
+        onProgressChange={updateProgress}
+        onExit={() => setScreen({ name: 'home' })}
+      />
+    )
+  }
+
+  if (screen.name === 'match') {
+    const group = findGroup(screen.groupId)
+    if (!group) {
+      return <Home {...homeProps} totalWords={words.length} />
+    }
+    return (
+      <MatchGame
+        key={`match-${group.id}-${group.wordIds.length}`}
+        group={group}
+        allWords={words}
+        progress={progress}
         onProgressChange={updateProgress}
         onExit={() => setScreen({ name: 'home' })}
       />
