@@ -169,6 +169,26 @@
   margin: 1.25rem 0 0.65rem;
 }
 
+.synonym-packs-home,
+.master-revision,
+.focus-list,
+.book-vocab {
+  margin-bottom: 0.85rem;
+}
+
+.packs-home-card {
+  border-color: color-mix(in srgb, var(--info) 40%, var(--border));
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--info) 10%, var(--surface)) 0%,
+    var(--surface) 70%
+  );
+}
+
+.group-count-packs {
+  color: var(--info);
+}
+
 .master-revision {
   margin-bottom: 0.25rem;
 }

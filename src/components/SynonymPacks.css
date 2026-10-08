@@ -1,0 +1,326 @@
+.packs {
+  padding: 0.65rem 1rem 1.75rem;
+  max-width: 34rem;
+  margin: 0 auto;
+  min-height: 100dvh;
+}
+
+.packs-top {
+  margin-bottom: 0.85rem;
+}
+
+.packs-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 6vw, 2.25rem);
+  font-weight: 650;
+  margin: 0.15rem 0 0.35rem;
+  line-height: 1.15;
+}
+
+.packs-sub {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.packs-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.packs-search-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.packs-search {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid var(--border);
+  border-radius: 0.85rem;
+  padding: 0.7rem 0.85rem;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  background: var(--surface);
+  color: var(--ink);
+  margin-bottom: 0.65rem;
+}
+
+.packs-search:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.packs-filters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.packs-filter {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  border-radius: 0.65rem;
+  padding: 0.45rem 0.25rem;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.packs-filter.is-active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.packs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.packs-list-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.65rem;
+  text-align: left;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 0.95rem;
+  padding: 0.85rem 0.9rem;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  box-shadow: var(--shadow-soft);
+}
+
+.packs-list-item:active {
+  transform: scale(0.995);
+}
+
+.packs-list-main h2 {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.25;
+  text-transform: capitalize;
+}
+
+.packs-list-main p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.packs-list-words {
+  margin-top: 0.4rem !important;
+  color: var(--ink) !important;
+  font-size: 0.82rem !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.packs-list-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.packs-count {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent-dim);
+}
+
+.packs-status-dot,
+.packs-status-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.packs-status-dot[data-status='known'],
+.packs-status-pill[data-status='known'] {
+  color: var(--accent-dim);
+}
+
+.packs-status-dot[data-status='review'],
+.packs-status-pill[data-status='review'] {
+  color: var(--danger);
+}
+
+.packs-empty {
+  text-align: center;
+  color: var(--muted);
+  margin: 2rem 0;
+}
+
+.packs-detail .packs-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.packs-detail .back-link {
+  margin-bottom: 0;
+}
+
+.pack-sheet {
+  border: 1px solid var(--border);
+  border-radius: 1.1rem;
+  background:
+    linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--accent) 10%, var(--surface)) 0%,
+      var(--surface) 60%
+    );
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.pack-kicker {
+  margin: 0;
+  padding: 1rem 1rem 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pack-theme {
+  margin: 0.25rem 1rem 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.pack-gloss {
+  margin: 0 1rem 0.85rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.pack-word-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0.65rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-height: none;
+}
+
+.pack-word-row {
+  background: color-mix(in srgb, var(--surface) 88%, white);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.75rem;
+}
+
+.pack-word-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.55rem;
+  margin-bottom: 0.2rem;
+}
+
+.pack-word {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 1.05rem;
+}
+
+.pack-nuance {
+  font-size: 0.75rem;
+  color: var(--info);
+  line-height: 1.3;
+}
+
+.pack-meaning {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.pack-sheet-footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 0.9rem calc(0.75rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 88%, var(--surface-2));
+}
+
+.pack-footer-label {
+  margin: 0;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.pack-nav {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* reuse study footer button look */
+.packs .flash-footer-btn {
+  appearance: none;
+  width: 3.35rem;
+  height: 3.35rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.packs .flash-footer-miss {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 30%, transparent);
+}
+
+.packs .flash-footer-ok {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface));
+  color: var(--accent-dim);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}

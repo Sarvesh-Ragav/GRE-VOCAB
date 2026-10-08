@@ -42,3 +42,22 @@ export const FOCUS_GROUP_ID = 'focus-list'
 export const HARD_MISS_THRESHOLD = 2
 
 export type StudyMode = 'learn' | 'revise'
+
+export type PackStatus = 'new' | 'known' | 'review'
+
+export interface SynonymPackWord {
+  id: number
+  word: string
+  nuance?: string
+}
+
+export interface SynonymPack {
+  id: string
+  theme: string
+  gloss: string
+  words: SynonymPackWord[]
+}
+
+export interface PackProgressStore {
+  packs: Record<string, PackStatus>
+}

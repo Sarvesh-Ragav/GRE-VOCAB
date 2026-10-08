@@ -10,7 +10,9 @@ interface HomeProps {
   focusGroup: WordGroup | null
   progress: ProgressStore
   totalWords: number
+  synonymPackCount: number
   onStudy: (groupId: string, mode: 'learn' | 'revise') => void
+  onOpenPacks: () => void
   onClearProgress: () => void
   onClearFocusProgress: () => void
   onClearBookProgress: () => void
@@ -29,7 +31,9 @@ export function Home({
   focusGroup,
   progress,
   totalWords,
+  synonymPackCount,
   onStudy,
+  onOpenPacks,
   onClearProgress,
   onClearFocusProgress,
   onClearBookProgress,
@@ -75,7 +79,8 @@ export function Home({
         <p className="home-kicker">GRE Verbal</p>
         <h1 className="home-title">Vocab Drill</h1>
         <p className="home-sub">
-          Flashcards with ✓ / ✗ for fast revision, or Guess to type the meaning.
+          Synonym packs for fast family revision, or flashcards with ✓ / ✗ and
+          Guess.
         </p>
         <div className="home-overall" aria-label="Overall progress">
           <div className="home-overall-bar">
@@ -177,6 +182,31 @@ export function Home({
                 </button>
               </div>
             </form>
+          </div>
+        </section>
+      )}
+
+      {synonymPackCount > 0 && (
+        <section className="synonym-packs-home" aria-label="Synonym packs">
+          <div className="group-card packs-home-card">
+            <div className="group-card-top">
+              <div>
+                <h2>Synonym packs</h2>
+                <p className="group-meta">
+                  Same-meaning families for quick scan revision — no quizzes
+                </p>
+              </div>
+              <span className="group-count group-count-packs">{synonymPackCount}</span>
+            </div>
+            <div className="group-actions group-actions-single">
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={onOpenPacks}
+              >
+                Browse packs
+              </button>
+            </div>
           </div>
         </section>
       )}

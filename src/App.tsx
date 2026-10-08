@@ -1,5 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { ProgressStore, StudyMode, VocabWord, WordGroup } from './types'
+import type {
+  PackProgressStore,
+  ProgressStore,
+  StudyMode,
+  SynonymPack,
+  VocabWord,
+  WordGroup,
+} from './types'
 import { FOCUS_GROUP_ID, MASTER_REVISION_ID } from './types'
 import {
   buildBookGroups,
@@ -8,6 +15,7 @@ import {
   buildMasterRevisionGroup,
 } from './lib/groups'
 import { emptyProgress, loadProgress, saveProgress, clearProgressForIds } from './lib/progress'
+import { loadPackProgress, savePackProgress } from './lib/packs'
 import { persistProgress, restoreProgress, wordCount } from './lib/storage'
 import {
   clearSyncCode,
@@ -20,16 +28,22 @@ import {
 } from './lib/sync'
 import { Home } from './components/Home'
 import { Study } from './components/Study'
+import { SynonymPacks } from './components/SynonymPacks'
 import './App.css'
 
 type Screen =
   | { name: 'home' }
   | { name: 'study'; groupId: string; mode: StudyMode }
+  | { name: 'packs' }
 
 export default function App() {
   const [words, setWords] = useState<VocabWord[] | null>(null)
+  const [packs, setPacks] = useState<SynonymPack[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState<ProgressStore>(() => loadProgress())
+  const [packProgress, setPackProgress] = useState<PackProgressStore>(() =>
+    loadPackProgress(),
+  )
   const [ready, setReady] = useState(false)
   const [screen, setScreen] = useState<Screen>({ name: 'home' })
   const [syncCode, setSyncCodeState] = useState(() => getSyncCode() ?? '')
@@ -40,12 +54,20 @@ export default function App() {
   const booting = useRef(true)
 
   useEffect(() => {
-    fetch('/vocab.json')
-      .then((r) => {
+    Promise.all([
+      fetch('/vocab.json').then((r) => {
         if (!r.ok) throw new Error('Could not load vocab.json')
-        return r.json()
+        return r.json() as Promise<VocabWord[]>
+      }),
+      fetch('/synonym-packs.json').then((r) => {
+        if (!r.ok) throw new Error('Could not load synonym-packs.json')
+        return r.json() as Promise<{ packs: SynonymPack[] }>
+      }),
+    ])
+      .then(([vocab, packFile]) => {
+        setWords(vocab)
+        setPacks(packFile.packs ?? [])
       })
-      .then((data: VocabWord[]) => setWords(data))
       .catch((e: Error) => setError(e.message))
   }, [])
 
@@ -179,6 +201,11 @@ export default function App() {
     schedulePush(next, false)
   }
 
+  function updatePackProgress(next: PackProgressStore) {
+    setPackProgress(next)
+    savePackProgress(next)
+  }
+
   function clearProgress() {
     const empty = emptyProgress()
     setProgress(empty)
@@ -258,8 +285,10 @@ export default function App() {
     focusGroup,
     progress,
     totalWords: words?.length ?? 0,
+    synonymPackCount: packs?.length ?? 0,
     onStudy: (groupId: string, mode: StudyMode) =>
       setScreen({ name: 'study', groupId, mode }),
+    onOpenPacks: () => setScreen({ name: 'packs' }),
     onClearProgress: clearProgress,
     onClearFocusProgress: clearFocusProgress,
     onClearBookProgress: clearBookProgress,
@@ -279,7 +308,7 @@ export default function App() {
     )
   }
 
-  if (!words || !ready) {
+  if (!words || !packs || !ready) {
     return (
       <div className="boot-msg">
         <p>Loading vocabulary…</p>
@@ -300,6 +329,18 @@ export default function App() {
         progress={progress}
         mode={screen.mode}
         onProgressChange={updateProgress}
+        onExit={() => setScreen({ name: 'home' })}
+      />
+    )
+  }
+
+  if (screen.name === 'packs') {
+    return (
+      <SynonymPacks
+        packs={packs}
+        allWords={words}
+        packProgress={packProgress}
+        onPackProgressChange={updatePackProgress}
         onExit={() => setScreen({ name: 'home' })}
       />
     )

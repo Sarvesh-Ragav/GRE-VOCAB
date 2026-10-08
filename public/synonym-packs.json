@@ -1,0 +1,4485 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "pack-001",
+      "theme": "praise and approval",
+      "gloss": "formal or warm praise; worthy of praise",
+      "words": [
+        {
+          "id": 61,
+          "word": "approbation"
+        },
+        {
+          "id": 302,
+          "word": "encomium"
+        },
+        {
+          "id": 652,
+          "word": "panegyric"
+        },
+        {
+          "id": 324,
+          "word": "eulogy",
+          "nuance": "praise spoken at a funeral"
+        },
+        {
+          "id": 524,
+          "word": "kudos"
+        },
+        {
+          "id": 536,
+          "word": "laudable",
+          "nuance": "adjective, \"deserving praise\""
+        },
+        {
+          "id": 550,
+          "word": "lionize",
+          "nuance": "treat as a celebrity"
+        }
+      ]
+    },
+    {
+      "id": "pack-002",
+      "theme": "respect, reverence, distinction",
+      "gloss": "deep respect, or worthy of it",
+      "words": [
+        {
+          "id": 958,
+          "word": "venerate"
+        },
+        {
+          "id": 208,
+          "word": "deference",
+          "nuance": "yielding to another's authority or opinion"
+        },
+        {
+          "id": 425,
+          "word": "homage"
+        },
+        {
+          "id": 86,
+          "word": "august",
+          "nuance": "describe the admired person"
+        },
+        {
+          "id": 322,
+          "word": "estimable",
+          "nuance": "describe the admired person"
+        },
+        {
+          "id": 299,
+          "word": "eminent",
+          "nuance": "describe the admired person"
+        }
+      ]
+    },
+    {
+      "id": "pack-003",
+      "theme": "scold or attack harshly in words",
+      "gloss": "severe verbal criticism, from reprimand to abusive rant",
+      "words": [
+        {
+          "id": 131,
+          "word": "castigate"
+        },
+        {
+          "id": 135,
+          "word": "censure"
+        },
+        {
+          "id": 953,
+          "word": "upbraid"
+        },
+        {
+          "id": 797,
+          "word": "reproach"
+        },
+        {
+          "id": 23,
+          "word": "admonish",
+          "nuance": "mild, cautioning"
+        },
+        {
+          "id": 411,
+          "word": "harangue",
+          "nuance": "long, loud, bitter speech"
+        },
+        {
+          "id": 922,
+          "word": "tirade",
+          "nuance": "long, loud, bitter speech"
+        },
+        {
+          "id": 224,
+          "word": "diatribe",
+          "nuance": "long, loud, bitter speech"
+        },
+        {
+          "id": 505,
+          "word": "invective"
+        },
+        {
+          "id": 975,
+          "word": "vituperate"
+        },
+        {
+          "id": 378,
+          "word": "fulminate"
+        },
+        {
+          "id": 974,
+          "word": "vitriol"
+        },
+        {
+          "id": 708,
+          "word": "polemic",
+          "nuance": "argumentative attack on an idea"
+        }
+      ]
+    },
+    {
+      "id": "pack-004",
+      "theme": "curses",
+      "gloss": "a curse",
+      "words": [
+        {
+          "id": 456,
+          "word": "imprecation"
+        },
+        {
+          "id": 567,
+          "word": "malediction"
+        }
+      ]
+    },
+    {
+      "id": "pack-005",
+      "theme": "belittle, mock, slander",
+      "gloss": "attack someone's reputation or ridicule them",
+      "words": [
+        {
+          "id": 215,
+          "word": "denigrate"
+        },
+        {
+          "id": 248,
+          "word": "disparage"
+        },
+        {
+          "id": 217,
+          "word": "deride"
+        },
+        {
+          "id": 529,
+          "word": "lampoon",
+          "nuance": "satirical ridicule"
+        },
+        {
+          "id": 77,
+          "word": "aspersions"
+        },
+        {
+          "id": 124,
+          "word": "calumny",
+          "nuance": "malicious lie"
+        },
+        {
+          "id": 457,
+          "word": "impugn"
+        },
+        {
+          "id": 240,
+          "word": "discredit"
+        },
+        {
+          "id": 673,
+          "word": "pejorative",
+          "nuance": "a derogatory word or adjective"
+        }
+      ]
+    },
+    {
+      "id": "pack-006",
+      "theme": "sharp, biting tone",
+      "gloss": "harsh, sour, cutting in manner or speech",
+      "words": [
+        {
+          "id": 17,
+          "word": "acerbic"
+        },
+        {
+          "id": 18,
+          "word": "acidulous"
+        },
+        {
+          "id": 134,
+          "word": "caustic"
+        },
+        {
+          "id": 834,
+          "word": "scathing"
+        },
+        {
+          "id": 934,
+          "word": "trenchant",
+          "nuance": "forceful and incisive, not always negative"
+        },
+        {
+          "id": 763,
+          "word": "pungent"
+        },
+        {
+          "id": 828,
+          "word": "sardonic",
+          "nuance": "scornful, mocking"
+        },
+        {
+          "id": 76,
+          "word": "asperity"
+        }
+      ]
+    },
+    {
+      "id": "pack-007",
+      "theme": "abundance and excess",
+      "gloss": "plenty, often too much",
+      "words": [
+        {
+          "id": 180,
+          "word": "copious"
+        },
+        {
+          "id": 703,
+          "word": "plethora"
+        },
+        {
+          "id": 740,
+          "word": "profuse"
+        },
+        {
+          "id": 795,
+          "word": "replete"
+        },
+        {
+          "id": 900,
+          "word": "surfeit"
+        },
+        {
+          "id": 853,
+          "word": "slew"
+        },
+        {
+          "id": 863,
+          "word": "spate"
+        },
+        {
+          "id": 488,
+          "word": "inordinate",
+          "nuance": "excessive"
+        },
+        {
+          "id": 829,
+          "word": "satiate",
+          "nuance": "fill to excess"
+        },
+        {
+          "id": 503,
+          "word": "inundate",
+          "nuance": "overwhelm with a flood"
+        }
+      ]
+    },
+    {
+      "id": "pack-008",
+      "theme": "spread everywhere, saturate",
+      "gloss": "present or soaking throughout",
+      "words": [
+        {
+          "id": 942,
+          "word": "ubiquitous"
+        },
+        {
+          "id": 689,
+          "word": "pervasive"
+        },
+        {
+          "id": 814,
+          "word": "rife",
+          "nuance": "abundant, widespread (usually bad things)"
+        },
+        {
+          "id": 686,
+          "word": "permeate"
+        },
+        {
+          "id": 830,
+          "word": "saturate"
+        },
+        {
+          "id": 437,
+          "word": "imbue",
+          "nuance": "thoroughly infused"
+        },
+        {
+          "id": 877,
+          "word": "steeped",
+          "nuance": "thoroughly infused"
+        }
+      ]
+    },
+    {
+      "id": "pack-009",
+      "theme": "scarce, tiny amount",
+      "gloss": "a very small amount, or not enough",
+      "words": [
+        {
+          "id": 668,
+          "word": "paucity"
+        },
+        {
+          "id": 833,
+          "word": "scant"
+        },
+        {
+          "id": 835,
+          "word": "scintilla"
+        },
+        {
+          "id": 592,
+          "word": "modicum"
+        },
+        {
+          "id": 964,
+          "word": "vestige"
+        }
+      ]
+    },
+    {
+      "id": "pack-010",
+      "theme": "poverty",
+      "gloss": "extreme lack of money",
+      "words": [
+        {
+          "id": 444,
+          "word": "impecunious"
+        },
+        {
+          "id": 474,
+          "word": "indigence"
+        },
+        {
+          "id": 678,
+          "word": "penury"
+        },
+        {
+          "id": 578,
+          "word": "mendicant",
+          "nuance": "beggar"
+        }
+      ]
+    },
+    {
+      "id": "pack-011",
+      "theme": "trivial, unimportant",
+      "gloss": "too small to matter",
+      "words": [
+        {
+          "id": 935,
+          "word": "trifling"
+        },
+        {
+          "id": 467,
+          "word": "inconsequential"
+        },
+        {
+          "id": 615,
+          "word": "nominal",
+          "nuance": "in name only, merely symbolic"
+        },
+        {
+          "id": 924,
+          "word": "token",
+          "nuance": "in name only, merely symbolic"
+        },
+        {
+          "id": 854,
+          "word": "slight"
+        },
+        {
+          "id": 669,
+          "word": "peccadillo",
+          "nuance": "minor fault"
+        }
+      ]
+    },
+    {
+      "id": "pack-012",
+      "theme": "talkative and wordy",
+      "gloss": "talking or writing too much",
+      "words": [
+        {
+          "id": 384,
+          "word": "garrulous"
+        },
+        {
+          "id": 555,
+          "word": "loquacious"
+        },
+        {
+          "id": 978,
+          "word": "voluble"
+        },
+        {
+          "id": 960,
+          "word": "verbose"
+        },
+        {
+          "id": 743,
+          "word": "prolix"
+        },
+        {
+          "id": 716,
+          "word": "prattle",
+          "nuance": "idle chatter"
+        },
+        {
+          "id": 229,
+          "word": "diffuse",
+          "nuance": "wordy or spread out"
+        }
+      ]
+    },
+    {
+      "id": "pack-013",
+      "theme": "pompous, inflated style",
+      "gloss": "overblown, showy language or manner",
+      "words": [
+        {
+          "id": 111,
+          "word": "bombastic"
+        },
+        {
+          "id": 398,
+          "word": "grandiloquent"
+        },
+        {
+          "id": 639,
+          "word": "orotund"
+        },
+        {
+          "id": 939,
+          "word": "turgid"
+        },
+        {
+          "id": 362,
+          "word": "florid"
+        },
+        {
+          "id": 816,
+          "word": "rococo"
+        },
+        {
+          "id": 647,
+          "word": "overwrought",
+          "nuance": "also means agitated"
+        },
+        {
+          "id": 202,
+          "word": "declaim",
+          "nuance": "speak in an oratorical way"
+        }
+      ]
+    },
+    {
+      "id": "pack-014",
+      "theme": "few words, reserved",
+      "gloss": "saying little",
+      "words": [
+        {
+          "id": 527,
+          "word": "laconic",
+          "nuance": "concise"
+        },
+        {
+          "id": 912,
+          "word": "taciturn",
+          "nuance": "reserved, reluctant to talk"
+        },
+        {
+          "id": 807,
+          "word": "reticent",
+          "nuance": "reserved, reluctant to talk"
+        },
+        {
+          "id": 919,
+          "word": "terse",
+          "nuance": "concise"
+        }
+      ]
+    },
+    {
+      "id": "pack-015",
+      "theme": "summarize, condense, essence",
+      "gloss": "shorten, or the core meaning",
+      "words": [
+        {
+          "id": 10,
+          "word": "abridge"
+        },
+        {
+          "id": 721,
+          "word": "précis"
+        },
+        {
+          "id": 152,
+          "word": "compendium",
+          "nuance": "concise but complete collection"
+        },
+        {
+          "id": 908,
+          "word": "synoptic"
+        },
+        {
+          "id": 779,
+          "word": "recapitulate"
+        },
+        {
+          "id": 262,
+          "word": "distill"
+        },
+        {
+          "id": 389,
+          "word": "gist"
+        },
+        {
+          "id": 696,
+          "word": "pith"
+        },
+        {
+          "id": 657,
+          "word": "pare",
+          "nuance": "trim off outer parts"
+        }
+      ]
+    },
+    {
+      "id": "pack-016",
+      "theme": "soothe, appease",
+      "gloss": "calm anger or ease distress",
+      "words": [
+        {
+          "id": 80,
+          "word": "assuage"
+        },
+        {
+          "id": 594,
+          "word": "mollify"
+        },
+        {
+          "id": 697,
+          "word": "placate"
+        },
+        {
+          "id": 749,
+          "word": "propitiate"
+        },
+        {
+          "id": 158,
+          "word": "conciliatory"
+        },
+        {
+          "id": 165,
+          "word": "console"
+        },
+        {
+          "id": 558,
+          "word": "lull",
+          "nuance": "can mean falsely reassure"
+        },
+        {
+          "id": 852,
+          "word": "slake",
+          "nuance": "satisfy thirst or desire"
+        }
+      ]
+    },
+    {
+      "id": "pack-017",
+      "theme": "lessen severity, relieve",
+      "gloss": "make less intense or painful",
+      "words": [
+        {
+          "id": 2,
+          "word": "abate"
+        },
+        {
+          "id": 37,
+          "word": "alleviate"
+        },
+        {
+          "id": 590,
+          "word": "mitigate"
+        },
+        {
+          "id": 649,
+          "word": "palliate",
+          "nuance": "ease symptoms without curing"
+        },
+        {
+          "id": 892,
+          "word": "subside",
+          "nuance": "die down"
+        },
+        {
+          "id": 49,
+          "word": "anodyne",
+          "nuance": "soothing or a painkiller"
+        },
+        {
+          "id": 45,
+          "word": "analgesia"
+        }
+      ]
+    },
+    {
+      "id": "pack-018",
+      "theme": "weaken, drain strength",
+      "gloss": "reduce force or vigor",
+      "words": [
+        {
+          "id": 304,
+          "word": "enervate"
+        },
+        {
+          "id": 440,
+          "word": "impair"
+        },
+        {
+          "id": 827,
+          "word": "sap"
+        },
+        {
+          "id": 945,
+          "word": "undermine"
+        },
+        {
+          "id": 81,
+          "word": "attenuate"
+        }
+      ]
+    },
+    {
+      "id": "pack-019",
+      "theme": "formally give up, retract, revoke",
+      "gloss": "renounce, cancel, or surrender",
+      "words": [
+        {
+          "id": 3,
+          "word": "abdicate",
+          "nuance": "give up formally"
+        },
+        {
+          "id": 7,
+          "word": "abjure",
+          "nuance": "give up formally"
+        },
+        {
+          "id": 778,
+          "word": "recant",
+          "nuance": "take back a statement"
+        },
+        {
+          "id": 799,
+          "word": "repudiate"
+        },
+        {
+          "id": 801,
+          "word": "rescind"
+        },
+        {
+          "id": 48,
+          "word": "annul",
+          "nuance": "cancel a law or rule"
+        },
+        {
+          "id": 370,
+          "word": "forfeit",
+          "nuance": "lose through failing an obligation"
+        },
+        {
+          "id": 266,
+          "word": "divest"
+        },
+        {
+          "id": 514,
+          "word": "jettison",
+          "nuance": "cast off"
+        },
+        {
+          "id": 270,
+          "word": "doff",
+          "nuance": "cast off"
+        }
+      ]
+    },
+    {
+      "id": "pack-020",
+      "theme": "disprove or contradict",
+      "gloss": "show or declare something false",
+      "words": [
+        {
+          "id": 787,
+          "word": "refute"
+        },
+        {
+          "id": 201,
+          "word": "debunk"
+        },
+        {
+          "id": 381,
+          "word": "gainsay"
+        },
+        {
+          "id": 99,
+          "word": "belie",
+          "nuance": "contradict or misrepresent"
+        },
+        {
+          "id": 608,
+          "word": "negate"
+        }
+      ]
+    },
+    {
+      "id": "pack-021",
+      "theme": "stubborn, disobedient",
+      "gloss": "resisting change, control, or authority",
+      "words": [
+        {
+          "id": 621,
+          "word": "obdurate"
+        },
+        {
+          "id": 626,
+          "word": "obstinate"
+        },
+        {
+          "id": 500,
+          "word": "intransigent"
+        },
+        {
+          "id": 452,
+          "word": "implacable",
+          "nuance": "cannot be moved or appeased"
+        },
+        {
+          "id": 477,
+          "word": "inexorable",
+          "nuance": "cannot be moved or appeased"
+        },
+        {
+          "id": 499,
+          "word": "intractable"
+        },
+        {
+          "id": 777,
+          "word": "recalcitrant"
+        },
+        {
+          "id": 785,
+          "word": "refractory"
+        },
+        {
+          "id": 173,
+          "word": "contumacious"
+        },
+        {
+          "id": 805,
+          "word": "restive",
+          "nuance": "uneasy under control"
+        }
+      ]
+    },
+    {
+      "id": "pack-022",
+      "theme": "yielding, compliant, agreeable",
+      "gloss": "willing to go along or give in",
+      "words": [
+        {
+          "id": 159,
+          "word": "concur"
+        },
+        {
+          "id": 15,
+          "word": "accede"
+        },
+        {
+          "id": 157,
+          "word": "concede"
+        },
+        {
+          "id": 156,
+          "word": "compliant"
+        },
+        {
+          "id": 154,
+          "word": "complaisant"
+        },
+        {
+          "id": 929,
+          "word": "tractable"
+        },
+        {
+          "id": 569,
+          "word": "malleable",
+          "nuance": "easily shaped or influenced"
+        },
+        {
+          "id": 699,
+          "word": "plastic",
+          "nuance": "easily shaped or influenced"
+        }
+      ]
+    },
+    {
+      "id": "pack-023",
+      "theme": "servile flattery",
+      "gloss": "fawning to win favor",
+      "words": [
+        {
+          "id": 624,
+          "word": "obsequious"
+        },
+        {
+          "id": 905,
+          "word": "sycophant"
+        },
+        {
+          "id": 923,
+          "word": "toady"
+        },
+        {
+          "id": 350,
+          "word": "fawn"
+        },
+        {
+          "id": 404,
+          "word": "grovel"
+        },
+        {
+          "id": 483,
+          "word": "ingratiate"
+        },
+        {
+          "id": 898,
+          "word": "supplicate",
+          "nuance": "beg humbly"
+        }
+      ]
+    },
+    {
+      "id": "pack-024",
+      "theme": "object, disagree, quibble",
+      "gloss": "express opposition or petty objection",
+      "words": [
+        {
+          "id": 257,
+          "word": "dissent"
+        },
+        {
+          "id": 214,
+          "word": "demur"
+        },
+        {
+          "id": 93,
+          "word": "balk"
+        },
+        {
+          "id": 768,
+          "word": "quibble",
+          "nuance": "trivial objection"
+        }
+      ]
+    },
+    {
+      "id": "pack-025",
+      "theme": "fight and combat",
+      "gloss": "aggressive, quarrelsome, attacking",
+      "words": [
+        {
+          "id": 760,
+          "word": "pugnacious"
+        },
+        {
+          "id": 937,
+          "word": "truculent"
+        },
+        {
+          "id": 169,
+          "word": "contentious"
+        },
+        {
+          "id": 374,
+          "word": "fractious"
+        },
+        {
+          "id": 759,
+          "word": "pugilism",
+          "nuance": "boxing"
+        },
+        {
+          "id": 373,
+          "word": "fracas",
+          "nuance": "brawl"
+        },
+        {
+          "id": 78,
+          "word": "assail"
+        },
+        {
+          "id": 103,
+          "word": "besiege",
+          "nuance": "surround and attack"
+        }
+      ]
+    },
+    {
+      "id": "pack-026",
+      "theme": "bad-tempered, angry, irritable",
+      "gloss": "easily angered or sour",
+      "words": [
+        {
+          "id": 509,
+          "word": "irascible"
+        },
+        {
+          "id": 553,
+          "word": "livid"
+        },
+        {
+          "id": 943,
+          "word": "umbrage",
+          "nuance": "offense taken"
+        },
+        {
+          "id": 901,
+          "word": "surly"
+        },
+        {
+          "id": 278,
+          "word": "dyspeptic"
+        },
+        {
+          "id": 197,
+          "word": "curmudgeon"
+        },
+        {
+          "id": 767,
+          "word": "querulous",
+          "nuance": "complaining"
+        },
+        {
+          "id": 392,
+          "word": "glower",
+          "nuance": "angry stare"
+        },
+        {
+          "id": 403,
+          "word": "grouse",
+          "nuance": "complaining"
+        }
+      ]
+    },
+    {
+      "id": "pack-027",
+      "theme": "annoy, provoke hostility",
+      "gloss": "irritate or make unfriendly",
+      "words": [
+        {
+          "id": 612,
+          "word": "nettle"
+        },
+        {
+          "id": 965,
+          "word": "vex"
+        },
+        {
+          "id": 8,
+          "word": "abrasive"
+        },
+        {
+          "id": 400,
+          "word": "grating"
+        },
+        {
+          "id": 52,
+          "word": "antagonize"
+        },
+        {
+          "id": 36,
+          "word": "alienate"
+        }
+      ]
+    },
+    {
+      "id": "pack-028",
+      "theme": "calm and composed",
+      "gloss": "peaceful, untroubled",
+      "words": [
+        {
+          "id": 312,
+          "word": "equanimity"
+        },
+        {
+          "id": 448,
+          "word": "imperturbable"
+        },
+        {
+          "id": 698,
+          "word": "placid"
+        },
+        {
+          "id": 796,
+          "word": "repose"
+        }
+      ]
+    },
+    {
+      "id": "pack-029",
+      "theme": "unemotional, indifferent",
+      "gloss": "showing little feeling",
+      "words": [
+        {
+          "id": 443,
+          "word": "impassive"
+        },
+        {
+          "id": 883,
+          "word": "stoic"
+        },
+        {
+          "id": 884,
+          "word": "stolid"
+        },
+        {
+          "id": 693,
+          "word": "phlegmatic"
+        },
+        {
+          "id": 55,
+          "word": "apathy"
+        },
+        {
+          "id": 473,
+          "word": "indifferent"
+        },
+        {
+          "id": 38,
+          "word": "aloof",
+          "nuance": "distant, reserved"
+        },
+        {
+          "id": 490,
+          "word": "insensible",
+          "nuance": "unable to feel"
+        }
+      ]
+    },
+    {
+      "id": "pack-030",
+      "theme": "unbiased and fair",
+      "gloss": "not favoring any side",
+      "words": [
+        {
+          "id": 441,
+          "word": "impartial"
+        },
+        {
+          "id": 245,
+          "word": "disinterested"
+        },
+        {
+          "id": 622,
+          "word": "objective"
+        },
+        {
+          "id": 313,
+          "word": "equitable"
+        },
+        {
+          "id": 221,
+          "word": "detached"
+        },
+        {
+          "id": 250,
+          "word": "dispassionate"
+        }
+      ]
+    },
+    {
+      "id": "pack-031",
+      "theme": "sluggish, lazy, weary",
+      "gloss": "lacking energy",
+      "words": [
+        {
+          "id": 542,
+          "word": "lethargic"
+        },
+        {
+          "id": 531,
+          "word": "languid"
+        },
+        {
+          "id": 552,
+          "word": "listless"
+        },
+        {
+          "id": 534,
+          "word": "lassitude"
+        },
+        {
+          "id": 926,
+          "word": "torpor"
+        },
+        {
+          "id": 475,
+          "word": "indolent"
+        },
+        {
+          "id": 526,
+          "word": "lackluster"
+        },
+        {
+          "id": 860,
+          "word": "soporific",
+          "nuance": "sleep-inducing"
+        },
+        {
+          "id": 232,
+          "word": "dilatory",
+          "nuance": "slow, procrastinating"
+        },
+        {
+          "id": 359,
+          "word": "flag",
+          "nuance": "grow tired"
+        }
+      ]
+    },
+    {
+      "id": "pack-032",
+      "theme": "inactive, dormant",
+      "gloss": "not currently active but may revive",
+      "words": [
+        {
+          "id": 272,
+          "word": "dormant"
+        },
+        {
+          "id": 769,
+          "word": "quiescent"
+        },
+        {
+          "id": 344,
+          "word": "fallow"
+        },
+        {
+          "id": 5,
+          "word": "abeyance"
+        },
+        {
+          "id": 535,
+          "word": "latent"
+        },
+        {
+          "id": 476,
+          "word": "inert"
+        },
+        {
+          "id": 874,
+          "word": "stasis"
+        }
+      ]
+    },
+    {
+      "id": "pack-033",
+      "theme": "unchanging, fixed",
+      "gloss": "not changing",
+      "words": [
+        {
+          "id": 439,
+          "word": "immutable"
+        },
+        {
+          "id": 875,
+          "word": "static"
+        },
+        {
+          "id": 681,
+          "word": "perennial",
+          "nuance": "lasting or recurring"
+        },
+        {
+          "id": 876,
+          "word": "status quo"
+        }
+      ]
+    },
+    {
+      "id": "pack-034",
+      "theme": "timid, fearful",
+      "gloss": "lacking courage",
+      "words": [
+        {
+          "id": 191,
+          "word": "craven"
+        },
+        {
+          "id": 764,
+          "word": "pusillanimous"
+        },
+        {
+          "id": 921,
+          "word": "timorous"
+        },
+        {
+          "id": 228,
+          "word": "diffident",
+          "nuance": "shy, lacking confidence"
+        },
+        {
+          "id": 850,
+          "word": "skittish",
+          "nuance": "easily startled"
+        }
+      ]
+    },
+    {
+      "id": "pack-035",
+      "theme": "brave, bold",
+      "gloss": "fearless",
+      "words": [
+        {
+          "id": 501,
+          "word": "intrepid"
+        },
+        {
+          "id": 704,
+          "word": "plucky"
+        },
+        {
+          "id": 412,
+          "word": "hardy"
+        },
+        {
+          "id": 83,
+          "word": "audacious",
+          "nuance": "can be rude or reckless"
+        }
+      ]
+    },
+    {
+      "id": "pack-036",
+      "theme": "overstepping, arrogant, presumptuous",
+      "gloss": "taking more authority or liberty than warranted",
+      "words": [
+        {
+          "id": 288,
+          "word": "effrontery"
+        },
+        {
+          "id": 727,
+          "word": "presumptuous"
+        },
+        {
+          "id": 68,
+          "word": "arrogate"
+        },
+        {
+          "id": 631,
+          "word": "officious",
+          "nuance": "meddlesome"
+        },
+        {
+          "id": 446,
+          "word": "imperious"
+        },
+        {
+          "id": 667,
+          "word": "patronizing",
+          "nuance": "condescending"
+        }
+      ]
+    },
+    {
+      "id": "pack-037",
+      "theme": "cautious, wary",
+      "gloss": "careful about risk",
+      "words": [
+        {
+          "id": 140,
+          "word": "circumspect"
+        },
+        {
+          "id": 982,
+          "word": "wary"
+        },
+        {
+          "id": 757,
+          "word": "prudent",
+          "nuance": "also means wise about the future"
+        }
+      ]
+    },
+    {
+      "id": "pack-038",
+      "theme": "distrustful, doubtful",
+      "gloss": "inclined to doubt others",
+      "words": [
+        {
+          "id": 198,
+          "word": "cynical"
+        },
+        {
+          "id": 848,
+          "word": "skeptic"
+        },
+        {
+          "id": 275,
+          "word": "dubious"
+        },
+        {
+          "id": 540,
+          "word": "leery"
+        },
+        {
+          "id": 588,
+          "word": "misanthrope",
+          "nuance": "hater of humankind"
+        }
+      ]
+    },
+    {
+      "id": "pack-039",
+      "theme": "wise, discerning, perceptive",
+      "gloss": "good judgment and insight",
+      "words": [
+        {
+          "id": 822,
+          "word": "sagacious"
+        },
+        {
+          "id": 688,
+          "word": "perspicacious"
+        },
+        {
+          "id": 517,
+          "word": "judicious"
+        },
+        {
+          "id": 237,
+          "word": "discerning"
+        },
+        {
+          "id": 243,
+          "word": "discriminating"
+        },
+        {
+          "id": 21,
+          "word": "acumen",
+          "nuance": "a noun, \"sharp judgment\""
+        },
+        {
+          "id": 520,
+          "word": "keen"
+        },
+        {
+          "id": 725,
+          "word": "prescient",
+          "nuance": "foresight"
+        }
+      ]
+    },
+    {
+      "id": "pack-040",
+      "theme": "learned, expert",
+      "gloss": "knowledgeable",
+      "words": [
+        {
+          "id": 319,
+          "word": "erudite"
+        },
+        {
+          "id": 831,
+          "word": "savant"
+        },
+        {
+          "id": 163,
+          "word": "connoisseur",
+          "nuance": "expert in the fine arts"
+        },
+        {
+          "id": 176,
+          "word": "conversant"
+        },
+        {
+          "id": 670,
+          "word": "pedant",
+          "nuance": "shows off learning"
+        }
+      ]
+    },
+    {
+      "id": "pack-041",
+      "theme": "beginner, amateur, just starting",
+      "gloss": "new, inexperienced, or at an early stage",
+      "words": [
+        {
+          "id": 610,
+          "word": "neophyte"
+        },
+        {
+          "id": 941,
+          "word": "tyro"
+        },
+        {
+          "id": 360,
+          "word": "fledgling"
+        },
+        {
+          "id": 233,
+          "word": "dilettante",
+          "nuance": "superficial amateur"
+        },
+        {
+          "id": 607,
+          "word": "nascent",
+          "nuance": "just beginning"
+        },
+        {
+          "id": 465,
+          "word": "incipient",
+          "nuance": "just beginning"
+        },
+        {
+          "id": 464,
+          "word": "inchoate",
+          "nuance": "just beginning"
+        }
+      ]
+    },
+    {
+      "id": "pack-042",
+      "theme": "gullible, naive",
+      "gloss": "easily fooled",
+      "words": [
+        {
+          "id": 193,
+          "word": "credulous"
+        },
+        {
+          "id": 606,
+          "word": "naïve"
+        }
+      ]
+    },
+    {
+      "id": "pack-043",
+      "theme": "enthusiastic, passionate",
+      "gloss": "eager and intense",
+      "words": [
+        {
+          "id": 66,
+          "word": "ardent"
+        },
+        {
+          "id": 91,
+          "word": "avid"
+        },
+        {
+          "id": 994,
+          "word": "zeal"
+        },
+        {
+          "id": 354,
+          "word": "fervid"
+        },
+        {
+          "id": 927,
+          "word": "torrid",
+          "nuance": "also means very hot"
+        },
+        {
+          "id": 969,
+          "word": "vim"
+        },
+        {
+          "id": 34,
+          "word": "alacrity",
+          "nuance": "cheerful speed"
+        }
+      ]
+    },
+    {
+      "id": "pack-044",
+      "theme": "cheerful, joyful, playful",
+      "gloss": "high spirits and humor",
+      "words": [
+        {
+          "id": 108,
+          "word": "blithe",
+          "nuance": "can mean carelessly carefree"
+        },
+        {
+          "id": 292,
+          "word": "elated"
+        },
+        {
+          "id": 280,
+          "word": "ebullient"
+        },
+        {
+          "id": 826,
+          "word": "sanguine",
+          "nuance": "optimistic"
+        },
+        {
+          "id": 587,
+          "word": "mirth"
+        },
+        {
+          "id": 543,
+          "word": "levity"
+        },
+        {
+          "id": 516,
+          "word": "jocular"
+        },
+        {
+          "id": 340,
+          "word": "facetious",
+          "nuance": "joking at the wrong time"
+        },
+        {
+          "id": 274,
+          "word": "droll"
+        },
+        {
+          "id": 869,
+          "word": "sportive"
+        },
+        {
+          "id": 382,
+          "word": "gambol"
+        }
+      ]
+    },
+    {
+      "id": "pack-045",
+      "theme": "whimsical, impractical idealism",
+      "gloss": "fanciful, led by whims or ideals",
+      "words": [
+        {
+          "id": 986,
+          "word": "whimsical"
+        },
+        {
+          "id": 346,
+          "word": "fanciful"
+        },
+        {
+          "id": 770,
+          "word": "quixotic"
+        }
+      ]
+    },
+    {
+      "id": "pack-046",
+      "theme": "friendly, sociable",
+      "gloss": "warm and approachable",
+      "words": [
+        {
+          "id": 30,
+          "word": "affable"
+        },
+        {
+          "id": 112,
+          "word": "bonhomie"
+        },
+        {
+          "id": 401,
+          "word": "gregarious"
+        },
+        {
+          "id": 990,
+          "word": "winsome"
+        }
+      ]
+    },
+    {
+      "id": "pack-047",
+      "theme": "gloom, sorrow, mourning",
+      "gloss": "sad, mournful, or expressions of grief",
+      "words": [
+        {
+          "id": 557,
+          "word": "lugubrious"
+        },
+        {
+          "id": 600,
+          "word": "morose"
+        },
+        {
+          "id": 525,
+          "word": "lachrymose"
+        },
+        {
+          "id": 574,
+          "word": "maudlin",
+          "nuance": "sentimental to excess"
+        },
+        {
+          "id": 528,
+          "word": "lament"
+        },
+        {
+          "id": 235,
+          "word": "dirge",
+          "nuance": "songs, poems, sounds of mourning"
+        },
+        {
+          "id": 293,
+          "word": "elegy",
+          "nuance": "songs, poems, sounds of mourning"
+        },
+        {
+          "id": 523,
+          "word": "knell",
+          "nuance": "songs, poems, sounds of mourning"
+        }
+      ]
+    },
+    {
+      "id": "pack-048",
+      "theme": "remorse",
+      "gloss": "regret for wrongdoing",
+      "words": [
+        {
+          "id": 172,
+          "word": "contrite"
+        },
+        {
+          "id": 676,
+          "word": "penitent"
+        },
+        {
+          "id": 818,
+          "word": "rue"
+        }
+      ]
+    },
+    {
+      "id": "pack-049",
+      "theme": "generous",
+      "gloss": "giving freely",
+      "words": [
+        {
+          "id": 100,
+          "word": "beneficent"
+        },
+        {
+          "id": 564,
+          "word": "magnanimous"
+        },
+        {
+          "id": 603,
+          "word": "munificent"
+        },
+        {
+          "id": 533,
+          "word": "largess",
+          "nuance": "giving with a hint of superiority"
+        },
+        {
+          "id": 691,
+          "word": "philanthropy"
+        },
+        {
+          "id": 951,
+          "word": "unsparing"
+        },
+        {
+          "id": 537,
+          "word": "lavish"
+        },
+        {
+          "id": 736,
+          "word": "prodigal",
+          "nuance": "also means wasteful"
+        }
+      ]
+    },
+    {
+      "id": "pack-050",
+      "theme": "greedy, grasping",
+      "gloss": "excessive desire for money",
+      "words": [
+        {
+          "id": 89,
+          "word": "avarice"
+        },
+        {
+          "id": 196,
+          "word": "cupidity"
+        },
+        {
+          "id": 880,
+          "word": "stingy"
+        }
+      ]
+    },
+    {
+      "id": "pack-051",
+      "theme": "swindle, steal, extort",
+      "gloss": "obtain money dishonestly",
+      "words": [
+        {
+          "id": 397,
+          "word": "graft"
+        },
+        {
+          "id": 532,
+          "word": "larceny"
+        },
+        {
+          "id": 106,
+          "word": "bilk"
+        },
+        {
+          "id": 395,
+          "word": "gouge"
+        },
+        {
+          "id": 954,
+          "word": "usury",
+          "nuance": "excessive interest"
+        }
+      ]
+    },
+    {
+      "id": "pack-052",
+      "theme": "frugal, austere, self-denying",
+      "gloss": "simple living and restraint",
+      "words": [
+        {
+          "id": 377,
+          "word": "frugal"
+        },
+        {
+          "id": 862,
+          "word": "spartan"
+        },
+        {
+          "id": 87,
+          "word": "austere"
+        },
+        {
+          "id": 73,
+          "word": "ascetic"
+        },
+        {
+          "id": 596,
+          "word": "monastic"
+        },
+        {
+          "id": 915,
+          "word": "temperance"
+        },
+        {
+          "id": 13,
+          "word": "abstain",
+          "nuance": "refrain (or decline to vote)"
+        },
+        {
+          "id": 429,
+          "word": "husband",
+          "nuance": "manage sparingly"
+        },
+        {
+          "id": 881,
+          "word": "stint"
+        }
+      ]
+    },
+    {
+      "id": "pack-053",
+      "theme": "pleasure-seeking, indulgent",
+      "gloss": "devoted to pleasure, often immoral",
+      "words": [
+        {
+          "id": 417,
+          "word": "hedonist"
+        },
+        {
+          "id": 904,
+          "word": "sybarite"
+        },
+        {
+          "id": 311,
+          "word": "epicure",
+          "nuance": "refined tastes"
+        },
+        {
+          "id": 546,
+          "word": "libertine"
+        },
+        {
+          "id": 547,
+          "word": "licentious"
+        },
+        {
+          "id": 980,
+          "word": "wanton"
+        },
+        {
+          "id": 738,
+          "word": "profligate",
+          "nuance": "also wasteful"
+        }
+      ]
+    },
+    {
+      "id": "pack-054",
+      "theme": "fake, false, spurious",
+      "gloss": "not genuine or true",
+      "words": [
+        {
+          "id": 109,
+          "word": "bogus"
+        },
+        {
+          "id": 694,
+          "word": "phony"
+        },
+        {
+          "id": 317,
+          "word": "ersatz",
+          "nuance": "inferior substitute"
+        },
+        {
+          "id": 56,
+          "word": "apocryphal"
+        },
+        {
+          "id": 865,
+          "word": "specious",
+          "nuance": "seems true but is false"
+        },
+        {
+          "id": 343,
+          "word": "fallacious"
+        },
+        {
+          "id": 316,
+          "word": "erroneous"
+        },
+        {
+          "id": 125,
+          "word": "canard",
+          "nuance": "false rumor"
+        }
+      ]
+    },
+    {
+      "id": "pack-055",
+      "theme": "showy, pretentious",
+      "gloss": "false or flashy display",
+      "words": [
+        {
+          "id": 644,
+          "word": "ostentatious"
+        },
+        {
+          "id": 728,
+          "word": "pretentious"
+        },
+        {
+          "id": 31,
+          "word": "affectation",
+          "nuance": "fake behavior to impress"
+        },
+        {
+          "id": 571,
+          "word": "mannered"
+        },
+        {
+          "id": 914,
+          "word": "tawdry"
+        },
+        {
+          "id": 580,
+          "word": "meretricious",
+          "nuance": "flashy but worthless"
+        }
+      ]
+    },
+    {
+      "id": "pack-056",
+      "theme": "honest, sincere",
+      "gloss": "open and truthful",
+      "words": [
+        {
+          "id": 126,
+          "word": "candid"
+        },
+        {
+          "id": 480,
+          "word": "ingenuous",
+          "nuance": "can also mean naive"
+        },
+        {
+          "id": 71,
+          "word": "artless"
+        },
+        {
+          "id": 734,
+          "word": "probity"
+        },
+        {
+          "id": 959,
+          "word": "veracity"
+        },
+        {
+          "id": 732,
+          "word": "principled"
+        }
+      ]
+    },
+    {
+      "id": "pack-057",
+      "theme": "lying, double-dealing",
+      "gloss": "deceiving or avoiding the truth",
+      "words": [
+        {
+          "id": 577,
+          "word": "mendacious"
+        },
+        {
+          "id": 730,
+          "word": "prevaricate"
+        },
+        {
+          "id": 314,
+          "word": "equivocate",
+          "nuance": "use vague words to avoid commitment"
+        },
+        {
+          "id": 255,
+          "word": "dissemble"
+        },
+        {
+          "id": 277,
+          "word": "duplicity"
+        },
+        {
+          "id": 244,
+          "word": "disingenuous"
+        },
+        {
+          "id": 568,
+          "word": "malinger",
+          "nuance": "fake illness"
+        }
+      ]
+    },
+    {
+      "id": "pack-058",
+      "theme": "cunning, trickery, scheming",
+      "gloss": "deceit through cleverness",
+      "words": [
+        {
+          "id": 405,
+          "word": "guile"
+        },
+        {
+          "id": 137,
+          "word": "chicanery"
+        },
+        {
+          "id": 190,
+          "word": "crafty"
+        },
+        {
+          "id": 988,
+          "word": "wily"
+        },
+        {
+          "id": 541,
+          "word": "legerdemain"
+        },
+        {
+          "id": 885,
+          "word": "stratagem"
+        },
+        {
+          "id": 562,
+          "word": "machination"
+        },
+        {
+          "id": 150,
+          "word": "collude",
+          "nuance": "conspire"
+        },
+        {
+          "id": 427,
+          "word": "hoodwink",
+          "nuance": "to trick (dupe also a noun, the victim)"
+        },
+        {
+          "id": 276,
+          "word": "dupe",
+          "nuance": "to trick (dupe also a noun, the victim)"
+        },
+        {
+          "id": 506,
+          "word": "inveigle",
+          "nuance": "lure with flattery"
+        }
+      ]
+    },
+    {
+      "id": "pack-059",
+      "theme": "secretive",
+      "gloss": "hidden or stealthy",
+      "words": [
+        {
+          "id": 189,
+          "word": "covert"
+        },
+        {
+          "id": 379,
+          "word": "furtive"
+        },
+        {
+          "id": 12,
+          "word": "abscond"
+        }
+      ]
+    },
+    {
+      "id": "pack-060",
+      "theme": "disloyal, treacherous",
+      "gloss": "betraying trust",
+      "words": [
+        {
+          "id": 682,
+          "word": "perfidious"
+        },
+        {
+          "id": 933,
+          "word": "treacherous"
+        },
+        {
+          "id": 57,
+          "word": "apostate"
+        }
+      ]
+    },
+    {
+      "id": "pack-061",
+      "theme": "wicked, dishonorable",
+      "gloss": "morally low",
+      "words": [
+        {
+          "id": 486,
+          "word": "iniquity"
+        },
+        {
+          "id": 940,
+          "word": "turpitude"
+        },
+        {
+          "id": 798,
+          "word": "reprobate"
+        },
+        {
+          "id": 435,
+          "word": "ignoble"
+        },
+        {
+          "id": 97,
+          "word": "base"
+        },
+        {
+          "id": 836,
+          "word": "scurvy"
+        },
+        {
+          "id": 944,
+          "word": "unconscionable"
+        },
+        {
+          "id": 930,
+          "word": "transgression"
+        },
+        {
+          "id": 451,
+          "word": "impious"
+        }
+      ]
+    },
+    {
+      "id": "pack-062",
+      "theme": "flagrantly bad",
+      "gloss": "glaringly offensive",
+      "words": [
+        {
+          "id": 290,
+          "word": "egregious"
+        },
+        {
+          "id": 402,
+          "word": "grievous"
+        }
+      ]
+    },
+    {
+      "id": "pack-063",
+      "theme": "disgrace and ill repute",
+      "gloss": "shame or bad reputation",
+      "words": [
+        {
+          "id": 618,
+          "word": "notoriety"
+        },
+        {
+          "id": 879,
+          "word": "stigma"
+        },
+        {
+          "id": 636,
+          "word": "opprobrium"
+        },
+        {
+          "id": 658,
+          "word": "pariah"
+        }
+      ]
+    },
+    {
+      "id": "pack-064",
+      "theme": "foul, disgusting",
+      "gloss": "repulsive",
+      "words": [
+        {
+          "id": 355,
+          "word": "fetid"
+        },
+        {
+          "id": 614,
+          "word": "noisome"
+        },
+        {
+          "id": 870,
+          "word": "squalid"
+        },
+        {
+          "id": 144,
+          "word": "cloying",
+          "nuance": "sickeningly sweet"
+        },
+        {
+          "id": 6,
+          "word": "abhor",
+          "nuance": "verb, \"detest\""
+        }
+      ]
+    },
+    {
+      "id": "pack-065",
+      "theme": "spoil and degrade",
+      "gloss": "lower quality, make impure or damaged",
+      "words": [
+        {
+          "id": 200,
+          "word": "debase"
+        },
+        {
+          "id": 1,
+          "word": "abase"
+        },
+        {
+          "id": 24,
+          "word": "adulterate"
+        },
+        {
+          "id": 895,
+          "word": "sully"
+        },
+        {
+          "id": 206,
+          "word": "deface"
+        },
+        {
+          "id": 572,
+          "word": "mar"
+        },
+        {
+          "id": 107,
+          "word": "blight"
+        }
+      ]
+    },
+    {
+      "id": "pack-066",
+      "theme": "harmful",
+      "gloss": "causing damage",
+      "words": [
+        {
+          "id": 210,
+          "word": "deleterious"
+        },
+        {
+          "id": 687,
+          "word": "pernicious"
+        },
+        {
+          "id": 485,
+          "word": "inimical"
+        },
+        {
+          "id": 26,
+          "word": "adverse"
+        },
+        {
+          "id": 96,
+          "word": "bane"
+        },
+        {
+          "id": 972,
+          "word": "virulent"
+        },
+        {
+          "id": 665,
+          "word": "pathogenic"
+        },
+        {
+          "id": 508,
+          "word": "invidious"
+        }
+      ]
+    },
+    {
+      "id": "pack-067",
+      "theme": "harmless, healthy",
+      "gloss": "not dangerous",
+      "words": [
+        {
+          "id": 101,
+          "word": "benign"
+        },
+        {
+          "id": 487,
+          "word": "innocuous"
+        },
+        {
+          "id": 824,
+          "word": "salubrious"
+        },
+        {
+          "id": 75,
+          "word": "aseptic"
+        }
+      ]
+    },
+    {
+      "id": "pack-068",
+      "theme": "changeable, unpredictable",
+      "gloss": "shifting or erratic",
+      "words": [
+        {
+          "id": 128,
+          "word": "capricious"
+        },
+        {
+          "id": 579,
+          "word": "mercurial"
+        },
+        {
+          "id": 977,
+          "word": "volatile"
+        },
+        {
+          "id": 315,
+          "word": "erratic"
+        },
+        {
+          "id": 468,
+          "word": "inconstancy"
+        },
+        {
+          "id": 968,
+          "word": "vicissitude"
+        },
+        {
+          "id": 868,
+          "word": "sporadic",
+          "nuance": "irregular"
+        },
+        {
+          "id": 220,
+          "word": "desultory",
+          "nuance": "irregular"
+        },
+        {
+          "id": 450,
+          "word": "impetuous",
+          "nuance": "impulsive"
+        }
+      ]
+    },
+    {
+      "id": "pack-069",
+      "theme": "indecisive, wavering",
+      "gloss": "unable to settle",
+      "words": [
+        {
+          "id": 955,
+          "word": "vacillate"
+        },
+        {
+          "id": 641,
+          "word": "oscillate"
+        },
+        {
+          "id": 510,
+          "word": "irresolute"
+        },
+        {
+          "id": 263,
+          "word": "dither"
+        },
+        {
+          "id": 41,
+          "word": "ambivalent"
+        },
+        {
+          "id": 416,
+          "word": "hedge"
+        }
+      ]
+    },
+    {
+      "id": "pack-070",
+      "theme": "short-lived",
+      "gloss": "lasting briefly",
+      "words": [
+        {
+          "id": 310,
+          "word": "ephemeral"
+        },
+        {
+          "id": 361,
+          "word": "fleeting"
+        },
+        {
+          "id": 931,
+          "word": "transitory"
+        }
+      ]
+    },
+    {
+      "id": "pack-071",
+      "theme": "inherent, essential",
+      "gloss": "built into the nature of something",
+      "words": [
+        {
+          "id": 484,
+          "word": "inherent"
+        },
+        {
+          "id": 502,
+          "word": "intrinsic"
+        },
+        {
+          "id": 481,
+          "word": "ingrained"
+        },
+        {
+          "id": 679,
+          "word": "per se"
+        },
+        {
+          "id": 303,
+          "word": "endemic"
+        },
+        {
+          "id": 408,
+          "word": "hallmark"
+        }
+      ]
+    },
+    {
+      "id": "pack-072",
+      "theme": "inclination and tendency",
+      "gloss": "natural leaning",
+      "words": [
+        {
+          "id": 102,
+          "word": "bent"
+        },
+        {
+          "id": 675,
+          "word": "penchant"
+        },
+        {
+          "id": 735,
+          "word": "proclivity"
+        },
+        {
+          "id": 747,
+          "word": "propensity"
+        },
+        {
+          "id": 723,
+          "word": "predilection"
+        },
+        {
+          "id": 724,
+          "word": "predisposed"
+        },
+        {
+          "id": 253,
+          "word": "disposition"
+        }
+      ]
+    },
+    {
+      "id": "pack-073",
+      "theme": "abnormal, odd, inconsistent",
+      "gloss": "deviating from the norm",
+      "words": [
+        {
+          "id": 4,
+          "word": "aberrant"
+        },
+        {
+          "id": 51,
+          "word": "anomaly"
+        },
+        {
+          "id": 281,
+          "word": "eccentric"
+        },
+        {
+          "id": 432,
+          "word": "idiosyncrasy"
+        },
+        {
+          "id": 466,
+          "word": "incongruous"
+        },
+        {
+          "id": 241,
+          "word": "discrepancy"
+        }
+      ]
+    },
+    {
+      "id": "pack-074",
+      "theme": "opposite and contradictory",
+      "gloss": "opposed in nature",
+      "words": [
+        {
+          "id": 54,
+          "word": "antithetical"
+        },
+        {
+          "id": 171,
+          "word": "contraries"
+        },
+        {
+          "id": 655,
+          "word": "paradox"
+        },
+        {
+          "id": 186,
+          "word": "counterintuitive"
+        }
+      ]
+    },
+    {
+      "id": "pack-075",
+      "theme": "split and division",
+      "gloss": "divide into parts or factions",
+      "words": [
+        {
+          "id": 105,
+          "word": "bifurcate"
+        },
+        {
+          "id": 225,
+          "word": "dichotomy"
+        },
+        {
+          "id": 815,
+          "word": "rift"
+        },
+        {
+          "id": 342,
+          "word": "faction"
+        },
+        {
+          "id": 707,
+          "word": "polarized"
+        },
+        {
+          "id": 265,
+          "word": "diverge"
+        }
+      ]
+    },
+    {
+      "id": "pack-076",
+      "theme": "diverse, varied",
+      "gloss": "made of different kinds",
+      "words": [
+        {
+          "id": 420,
+          "word": "heterogeneous"
+        },
+        {
+          "id": 601,
+          "word": "multifarious"
+        },
+        {
+          "id": 957,
+          "word": "variegated"
+        },
+        {
+          "id": 283,
+          "word": "eclectic"
+        },
+        {
+          "id": 249,
+          "word": "disparate"
+        },
+        {
+          "id": 242,
+          "word": "discrete",
+          "nuance": "separate"
+        },
+        {
+          "id": 424,
+          "word": "hodgepodge",
+          "nuance": "jumble or mix"
+        },
+        {
+          "id": 663,
+          "word": "pastiche",
+          "nuance": "jumble or mix"
+        },
+        {
+          "id": 653,
+          "word": "panoply",
+          "nuance": "impressive array"
+        },
+        {
+          "id": 866,
+          "word": "spectrum"
+        },
+        {
+          "id": 710,
+          "word": "polyglot"
+        }
+      ]
+    },
+    {
+      "id": "pack-077",
+      "theme": "equivalent, matching",
+      "gloss": "comparable or corresponding",
+      "words": [
+        {
+          "id": 46,
+          "word": "analogous"
+        },
+        {
+          "id": 151,
+          "word": "commensurate"
+        },
+        {
+          "id": 155,
+          "word": "complementary"
+        },
+        {
+          "id": 426,
+          "word": "homogeneous",
+          "nuance": "uniform"
+        },
+        {
+          "id": 907,
+          "word": "synchronous",
+          "nuance": "at the same time"
+        },
+        {
+          "id": 846,
+          "word": "simultaneous",
+          "nuance": "at the same time"
+        }
+      ]
+    },
+    {
+      "id": "pack-078",
+      "theme": "merge and combine",
+      "gloss": "bring together",
+      "words": [
+        {
+          "id": 39,
+          "word": "amalgamate"
+        },
+        {
+          "id": 146,
+          "word": "coalesce"
+        },
+        {
+          "id": 166,
+          "word": "consolidate"
+        },
+        {
+          "id": 175,
+          "word": "converge"
+        },
+        {
+          "id": 469,
+          "word": "incorporate"
+        },
+        {
+          "id": 273,
+          "word": "dovetail"
+        },
+        {
+          "id": 33,
+          "word": "aggregate"
+        },
+        {
+          "id": 145,
+          "word": "coagulate",
+          "nuance": "liquid becomes solid"
+        }
+      ]
+    },
+    {
+      "id": "pack-079",
+      "theme": "spread and scatter",
+      "gloss": "send widely",
+      "words": [
+        {
+          "id": 252,
+          "word": "disperse"
+        },
+        {
+          "id": 256,
+          "word": "disseminate"
+        },
+        {
+          "id": 746,
+          "word": "propagate"
+        },
+        {
+          "id": 671,
+          "word": "peddle"
+        }
+      ]
+    },
+    {
+      "id": "pack-080",
+      "theme": "grow and expand",
+      "gloss": "increase in size or amount",
+      "words": [
+        {
+          "id": 84,
+          "word": "augment"
+        },
+        {
+          "id": 16,
+          "word": "accretion"
+        },
+        {
+          "id": 119,
+          "word": "burgeon"
+        },
+        {
+          "id": 742,
+          "word": "proliferate"
+        },
+        {
+          "id": 94,
+          "word": "balloon"
+        },
+        {
+          "id": 231,
+          "word": "dilate"
+        },
+        {
+          "id": 261,
+          "word": "distend"
+        },
+        {
+          "id": 352,
+          "word": "fecund",
+          "nuance": "fruitful"
+        },
+        {
+          "id": 194,
+          "word": "crescendo",
+          "nuance": "steady increase in intensity"
+        }
+      ]
+    },
+    {
+      "id": "pack-081",
+      "theme": "exaggerate, embellish",
+      "gloss": "overstate",
+      "words": [
+        {
+          "id": 298,
+          "word": "embellish"
+        },
+        {
+          "id": 32,
+          "word": "aggrandize"
+        },
+        {
+          "id": 430,
+          "word": "hyberbole",
+          "nuance": "spelled this way in your list"
+        }
+      ]
+    },
+    {
+      "id": "pack-082",
+      "theme": "improve and repair",
+      "gloss": "make better or put right",
+      "words": [
+        {
+          "id": 42,
+          "word": "ameliorate"
+        },
+        {
+          "id": 306,
+          "word": "enhance"
+        },
+        {
+          "id": 809,
+          "word": "revamp"
+        },
+        {
+          "id": 784,
+          "word": "redress"
+        },
+        {
+          "id": 790,
+          "word": "remedial"
+        },
+        {
+          "id": 294,
+          "word": "elevate"
+        }
+      ]
+    },
+    {
+      "id": "pack-083",
+      "theme": "strengthen and support",
+      "gloss": "reinforce, or back with evidence",
+      "words": [
+        {
+          "id": 110,
+          "word": "bolster"
+        },
+        {
+          "id": 121,
+          "word": "buttress"
+        },
+        {
+          "id": 371,
+          "word": "fortify"
+        },
+        {
+          "id": 181,
+          "word": "corroborate"
+        },
+        {
+          "id": 893,
+          "word": "substantiate"
+        },
+        {
+          "id": 269,
+          "word": "document"
+        },
+        {
+          "id": 946,
+          "word": "underscore"
+        }
+      ]
+    },
+    {
+      "id": "pack-084",
+      "theme": "provoke and cause",
+      "gloss": "stir up or bring about",
+      "words": [
+        {
+          "id": 365,
+          "word": "foment"
+        },
+        {
+          "id": 521,
+          "word": "kindle"
+        },
+        {
+          "id": 393,
+          "word": "goad"
+        },
+        {
+          "id": 985,
+          "word": "whet"
+        },
+        {
+          "id": 295,
+          "word": "elicit"
+        },
+        {
+          "id": 305,
+          "word": "engender"
+        },
+        {
+          "id": 720,
+          "word": "precipitate"
+        },
+        {
+          "id": 327,
+          "word": "exacerbate",
+          "nuance": "make worse"
+        },
+        {
+          "id": 132,
+          "word": "catalyst",
+          "nuance": "causer of change"
+        },
+        {
+          "id": 463,
+          "word": "incentive"
+        }
+      ]
+    },
+    {
+      "id": "pack-085",
+      "theme": "rebellion and unrest",
+      "gloss": "stirring up revolt",
+      "words": [
+        {
+          "id": 840,
+          "word": "sedition"
+        },
+        {
+          "id": 494,
+          "word": "insurrection"
+        },
+        {
+          "id": 462,
+          "word": "incendiary"
+        }
+      ]
+    },
+    {
+      "id": "pack-086",
+      "theme": "chaos and turmoil",
+      "gloss": "disorder",
+      "words": [
+        {
+          "id": 47,
+          "word": "anarchy"
+        },
+        {
+          "id": 563,
+          "word": "maelstrom"
+        },
+        {
+          "id": 938,
+          "word": "tumultuous"
+        },
+        {
+          "id": 375,
+          "word": "frenetic"
+        }
+      ]
+    },
+    {
+      "id": "pack-087",
+      "theme": "tangled, confusing",
+      "gloss": "complicated or incoherent",
+      "words": [
+        {
+          "id": 179,
+          "word": "convoluted"
+        },
+        {
+          "id": 928,
+          "word": "tortuous"
+        },
+        {
+          "id": 246,
+          "word": "disjointed"
+        },
+        {
+          "id": 162,
+          "word": "confound"
+        }
+      ]
+    },
+    {
+      "id": "pack-088",
+      "theme": "loud, harsh noise",
+      "gloss": "unpleasant or powerful sound",
+      "words": [
+        {
+          "id": 123,
+          "word": "cacophony"
+        },
+        {
+          "id": 259,
+          "word": "dissonance"
+        },
+        {
+          "id": 239,
+          "word": "discordant"
+        },
+        {
+          "id": 234,
+          "word": "din"
+        },
+        {
+          "id": 142,
+          "word": "clamor"
+        },
+        {
+          "id": 878,
+          "word": "stentorian",
+          "nuance": "powerful (voice)"
+        },
+        {
+          "id": 976,
+          "word": "vociferous",
+          "nuance": "noisily protesting"
+        },
+        {
+          "id": 98,
+          "word": "baying"
+        }
+      ]
+    },
+    {
+      "id": "pack-089",
+      "theme": "clear and obvious",
+      "gloss": "easily understood or seen",
+      "words": [
+        {
+          "id": 556,
+          "word": "lucid"
+        },
+        {
+          "id": 674,
+          "word": "pellucid"
+        },
+        {
+          "id": 549,
+          "word": "limpid"
+        },
+        {
+          "id": 495,
+          "word": "intelligible"
+        },
+        {
+          "id": 334,
+          "word": "explicit"
+        },
+        {
+          "id": 948,
+          "word": "unequivocal"
+        },
+        {
+          "id": 69,
+          "word": "articulate"
+        },
+        {
+          "id": 664,
+          "word": "patent"
+        },
+        {
+          "id": 570,
+          "word": "manifest"
+        },
+        {
+          "id": 823,
+          "word": "salient"
+        },
+        {
+          "id": 745,
+          "word": "pronounced"
+        }
+      ]
+    },
+    {
+      "id": "pack-090",
+      "theme": "obscure, known to few",
+      "gloss": "hard to grasp, secret",
+      "words": [
+        {
+          "id": 64,
+          "word": "arcane"
+        },
+        {
+          "id": 321,
+          "word": "esoteric"
+        },
+        {
+          "id": 781,
+          "word": "recondite"
+        },
+        {
+          "id": 629,
+          "word": "occult"
+        },
+        {
+          "id": 582,
+          "word": "metaphysical",
+          "nuance": "also abstract"
+        }
+      ]
+    },
+    {
+      "id": "pack-091",
+      "theme": "ambiguous, vague",
+      "gloss": "not clear or fixed",
+      "words": [
+        {
+          "id": 40,
+          "word": "ambiguous"
+        },
+        {
+          "id": 472,
+          "word": "indeterminate"
+        },
+        {
+          "id": 623,
+          "word": "oblique"
+        },
+        {
+          "id": 634,
+          "word": "opaque"
+        }
+      ]
+    },
+    {
+      "id": "pack-092",
+      "theme": "impenetrable, sealed",
+      "gloss": "not allowing passage",
+      "words": [
+        {
+          "id": 447,
+          "word": "impermeable"
+        },
+        {
+          "id": 449,
+          "word": "impervious"
+        },
+        {
+          "id": 419,
+          "word": "hermetic"
+        }
+      ]
+    },
+    {
+      "id": "pack-093",
+      "theme": "persuasive, plausible",
+      "gloss": "convincing",
+      "words": [
+        {
+          "id": 296,
+          "word": "eloquent"
+        },
+        {
+          "id": 149,
+          "word": "cogent"
+        },
+        {
+          "id": 701,
+          "word": "plausible"
+        },
+        {
+          "id": 962,
+          "word": "verisimilar"
+        }
+      ]
+    },
+    {
+      "id": "pack-094",
+      "theme": "puzzle, dilemma",
+      "gloss": "a baffling problem",
+      "words": [
+        {
+          "id": 307,
+          "word": "enigma"
+        },
+        {
+          "id": 174,
+          "word": "conundrum"
+        },
+        {
+          "id": 766,
+          "word": "quandary"
+        }
+      ]
+    },
+    {
+      "id": "pack-095",
+      "theme": "unstated, implied",
+      "gloss": "suggested not said",
+      "words": [
+        {
+          "id": 454,
+          "word": "implicit"
+        },
+        {
+          "id": 911,
+          "word": "tacit"
+        },
+        {
+          "id": 164,
+          "word": "connote"
+        },
+        {
+          "id": 491,
+          "word": "insinuate"
+        },
+        {
+          "id": 453,
+          "word": "implication"
+        },
+        {
+          "id": 216,
+          "word": "denote",
+          "nuance": "literal meaning (contrast with connote)"
+        }
+      ]
+    },
+    {
+      "id": "pack-096",
+      "theme": "relevant, suitable",
+      "gloss": "fitting and on-topic",
+      "words": [
+        {
+          "id": 387,
+          "word": "germane"
+        },
+        {
+          "id": 59,
+          "word": "apposite"
+        },
+        {
+          "id": 353,
+          "word": "felicitous"
+        },
+        {
+          "id": 920,
+          "word": "timely"
+        }
+      ]
+    },
+    {
+      "id": "pack-097",
+      "theme": "irrelevant, off-topic, marginal",
+      "gloss": "not central",
+      "words": [
+        {
+          "id": 338,
+          "word": "extraneous"
+        },
+        {
+          "id": 913,
+          "word": "tangential"
+        },
+        {
+          "id": 230,
+          "word": "digress"
+        },
+        {
+          "id": 685,
+          "word": "peripheral"
+        },
+        {
+          "id": 376,
+          "word": "fringe"
+        }
+      ]
+    },
+    {
+      "id": "pack-098",
+      "theme": "proper behavior",
+      "gloss": "good manners and conduct",
+      "words": [
+        {
+          "id": 204,
+          "word": "decorous"
+        },
+        {
+          "id": 751,
+          "word": "propriety"
+        },
+        {
+          "id": 599,
+          "word": "mores"
+        }
+      ]
+    },
+    {
+      "id": "pack-099",
+      "theme": "rude, awkward, uncouth",
+      "gloss": "lacking social grace",
+      "words": [
+        {
+          "id": 385,
+          "word": "gauche"
+        },
+        {
+          "id": 386,
+          "word": "gawky"
+        },
+        {
+          "id": 113,
+          "word": "boor"
+        },
+        {
+          "id": 692,
+          "word": "philistine"
+        },
+        {
+          "id": 950,
+          "word": "unseemly"
+        },
+        {
+          "id": 856,
+          "word": "solecism"
+        },
+        {
+          "id": 559,
+          "word": "lumber",
+          "nuance": "heavy, clumsy movement or style"
+        },
+        {
+          "id": 711,
+          "word": "ponderous",
+          "nuance": "heavy, clumsy movement or style"
+        }
+      ]
+    },
+    {
+      "id": "pack-100",
+      "theme": "dull, cliché, unoriginal",
+      "gloss": "stale, ordinary",
+      "words": [
+        {
+          "id": 95,
+          "word": "banal"
+        },
+        {
+          "id": 936,
+          "word": "trite"
+        },
+        {
+          "id": 406,
+          "word": "hackneyed"
+        },
+        {
+          "id": 700,
+          "word": "platitude"
+        },
+        {
+          "id": 672,
+          "word": "pedestrian"
+        },
+        {
+          "id": 752,
+          "word": "prosaic"
+        },
+        {
+          "id": 602,
+          "word": "mundane"
+        },
+        {
+          "id": 771,
+          "word": "quotidian",
+          "nuance": "daily"
+        },
+        {
+          "id": 492,
+          "word": "insipid"
+        },
+        {
+          "id": 597,
+          "word": "monotony"
+        },
+        {
+          "id": 218,
+          "word": "derivative",
+          "nuance": "copied from others"
+        }
+      ]
+    },
+    {
+      "id": "pack-101",
+      "theme": "principle and saying",
+      "gloss": "accepted truth or belief",
+      "words": [
+        {
+          "id": 92,
+          "word": "axiom"
+        },
+        {
+          "id": 576,
+          "word": "maxim"
+        },
+        {
+          "id": 226,
+          "word": "dictum"
+        },
+        {
+          "id": 271,
+          "word": "dogma"
+        },
+        {
+          "id": 323,
+          "word": "ethos"
+        },
+        {
+          "id": 654,
+          "word": "paradigm"
+        },
+        {
+          "id": 617,
+          "word": "normative"
+        },
+        {
+          "id": 127,
+          "word": "canonical"
+        },
+        {
+          "id": 640,
+          "word": "orthodox"
+        }
+      ]
+    },
+    {
+      "id": "pack-102",
+      "theme": "biased, narrow-minded",
+      "gloss": "one-sided or closed to other views",
+      "words": [
+        {
+          "id": 661,
+          "word": "partial"
+        },
+        {
+          "id": 662,
+          "word": "partisan"
+        },
+        {
+          "id": 916,
+          "word": "tendentious"
+        },
+        {
+          "id": 268,
+          "word": "doctrinaire"
+        },
+        {
+          "id": 136,
+          "word": "chauvinism"
+        },
+        {
+          "id": 515,
+          "word": "jingoism"
+        },
+        {
+          "id": 436,
+          "word": "illiberality"
+        },
+        {
+          "id": 345,
+          "word": "fanatical"
+        },
+        {
+          "id": 493,
+          "word": "insular"
+        },
+        {
+          "id": 604,
+          "word": "myopic"
+        }
+      ]
+    },
+    {
+      "id": "pack-103",
+      "theme": "broad-minded, universal",
+      "gloss": "open to all",
+      "words": [
+        {
+          "id": 133,
+          "word": "catholic"
+        },
+        {
+          "id": 182,
+          "word": "cosmopolitan"
+        },
+        {
+          "id": 545,
+          "word": "liberal"
+        },
+        {
+          "id": 289,
+          "word": "egalitarian"
+        }
+      ]
+    },
+    {
+      "id": "pack-104",
+      "theme": "old, outdated",
+      "gloss": "belonging to the past",
+      "words": [
+        {
+          "id": 65,
+          "word": "archaic"
+        },
+        {
+          "id": 625,
+          "word": "obsolete"
+        },
+        {
+          "id": 44,
+          "word": "anachronism",
+          "nuance": "something in the wrong time"
+        },
+        {
+          "id": 122,
+          "word": "bygone"
+        },
+        {
+          "id": 423,
+          "word": "hoary"
+        },
+        {
+          "id": 318,
+          "word": "erstwhile",
+          "nuance": "former"
+        },
+        {
+          "id": 970,
+          "word": "vintage"
+        }
+      ]
+    },
+    {
+      "id": "pack-105",
+      "theme": "foretell and foreshadow",
+      "gloss": "signal what is coming",
+      "words": [
+        {
+          "id": 368,
+          "word": "foreshadow"
+        },
+        {
+          "id": 85,
+          "word": "augury"
+        },
+        {
+          "id": 748,
+          "word": "prophetic"
+        },
+        {
+          "id": 25,
+          "word": "adumbrate",
+          "nuance": "outline or reveal partially"
+        },
+        {
+          "id": 722,
+          "word": "precursor"
+        },
+        {
+          "id": 267,
+          "word": "divine"
+        }
+      ]
+    },
+    {
+      "id": "pack-106",
+      "theme": "new and pioneering",
+      "gloss": "never seen before",
+      "words": [
+        {
+          "id": 619,
+          "word": "novel"
+        },
+        {
+          "id": 949,
+          "word": "unprecedented"
+        }
+      ]
+    },
+    {
+      "id": "pack-107",
+      "theme": "advocate and leader",
+      "gloss": "champion or lead a cause",
+      "words": [
+        {
+          "id": 27,
+          "word": "advocate"
+        },
+        {
+          "id": 335,
+          "word": "exponent"
+        },
+        {
+          "id": 20,
+          "word": "activism"
+        },
+        {
+          "id": 58,
+          "word": "apostle"
+        },
+        {
+          "id": 864,
+          "word": "spearhead"
+        },
+        {
+          "id": 956,
+          "word": "vanguard"
+        }
+      ]
+    },
+    {
+      "id": "pack-108",
+      "theme": "power and rulers",
+      "gloss": "authority and those who hold it",
+      "words": [
+        {
+          "id": 418,
+          "word": "hegemony"
+        },
+        {
+          "id": 706,
+          "word": "plutocracy"
+        },
+        {
+          "id": 761,
+          "word": "puissance"
+        },
+        {
+          "id": 714,
+          "word": "potentate"
+        },
+        {
+          "id": 565,
+          "word": "magnate"
+        },
+        {
+          "id": 63,
+          "word": "arbiter"
+        }
+      ]
+    },
+    {
+      "id": "pack-109",
+      "theme": "rank and layers",
+      "gloss": "levels in a series",
+      "words": [
+        {
+          "id": 422,
+          "word": "hierarchy"
+        },
+        {
+          "id": 282,
+          "word": "echelon"
+        },
+        {
+          "id": 886,
+          "word": "stratum"
+        },
+        {
+          "id": 396,
+          "word": "gradation"
+        },
+        {
+          "id": 872,
+          "word": "standing"
+        },
+        {
+          "id": 773,
+          "word": "ranks"
+        }
+      ]
+    },
+    {
+      "id": "pack-110",
+      "theme": "peak and bottom",
+      "gloss": "highest or lowest point",
+      "words": [
+        {
+          "id": 19,
+          "word": "acme",
+          "nuance": "top"
+        },
+        {
+          "id": 995,
+          "word": "zenith",
+          "nuance": "top"
+        },
+        {
+          "id": 195,
+          "word": "culminate",
+          "nuance": "top"
+        },
+        {
+          "id": 605,
+          "word": "nadir",
+          "nuance": "bottom or downward"
+        },
+        {
+          "id": 14,
+          "word": "abyss",
+          "nuance": "bottom or downward"
+        },
+        {
+          "id": 203,
+          "word": "declivity",
+          "nuance": "bottom or downward"
+        },
+        {
+          "id": 705,
+          "word": "plummet",
+          "nuance": "bottom or downward"
+        }
+      ]
+    },
+    {
+      "id": "pack-111",
+      "theme": "diligent and painstaking",
+      "gloss": "careful, persistent effort",
+      "words": [
+        {
+          "id": 79,
+          "word": "assiduous"
+        },
+        {
+          "id": 841,
+          "word": "sedulous"
+        },
+        {
+          "id": 471,
+          "word": "indefatigable"
+        },
+        {
+          "id": 583,
+          "word": "meticulous"
+        },
+        {
+          "id": 347,
+          "word": "fastidious"
+        }
+      ]
+    },
+    {
+      "id": "pack-112",
+      "theme": "demanding, burdensome",
+      "gloss": "hard to bear",
+      "words": [
+        {
+          "id": 67,
+          "word": "arduous"
+        },
+        {
+          "id": 633,
+          "word": "onerous"
+        },
+        {
+          "id": 331,
+          "word": "exigent"
+        },
+        {
+          "id": 328,
+          "word": "exacting"
+        },
+        {
+          "id": 993,
+          "word": "yoke"
+        }
+      ]
+    },
+    {
+      "id": "pack-113",
+      "theme": "hinder and prevent",
+      "gloss": "block or discourage",
+      "words": [
+        {
+          "id": 445,
+          "word": "impede"
+        },
+        {
+          "id": 888,
+          "word": "stymie"
+        },
+        {
+          "id": 369,
+          "word": "forestall"
+        },
+        {
+          "id": 222,
+          "word": "deterrent"
+        },
+        {
+          "id": 627,
+          "word": "obviate"
+        },
+        {
+          "id": 717,
+          "word": "pre-empt"
+        },
+        {
+          "id": 199,
+          "word": "daunt"
+        },
+        {
+          "id": 741,
+          "word": "prohibitive"
+        }
+      ]
+    },
+    {
+      "id": "pack-114",
+      "theme": "restrict, suppress, censor",
+      "gloss": "limit or silence",
+      "words": [
+        {
+          "id": 139,
+          "word": "circumscribe"
+        },
+        {
+          "id": 211,
+          "word": "delimit"
+        },
+        {
+          "id": 167,
+          "word": "constrict"
+        },
+        {
+          "id": 753,
+          "word": "proscribe"
+        },
+        {
+          "id": 336,
+          "word": "expurgate"
+        },
+        {
+          "id": 871,
+          "word": "squelch"
+        },
+        {
+          "id": 628,
+          "word": "occlude"
+        }
+      ]
+    },
+    {
+      "id": "pack-115",
+      "theme": "specify and list",
+      "gloss": "state precisely",
+      "words": [
+        {
+          "id": 882,
+          "word": "stipulate"
+        },
+        {
+          "id": 309,
+          "word": "enumerate"
+        },
+        {
+          "id": 212,
+          "word": "delineate"
+        }
+      ]
+    },
+    {
+      "id": "pack-116",
+      "theme": "guess and suppose",
+      "gloss": "infer or assume without full proof",
+      "words": [
+        {
+          "id": 902,
+          "word": "surmise"
+        },
+        {
+          "id": 867,
+          "word": "speculate"
+        },
+        {
+          "id": 712,
+          "word": "posit"
+        },
+        {
+          "id": 899,
+          "word": "supposition"
+        },
+        {
+          "id": 726,
+          "word": "presumptive"
+        },
+        {
+          "id": 339,
+          "word": "extrapolate"
+        },
+        {
+          "id": 205,
+          "word": "deem"
+        }
+      ]
+    },
+    {
+      "id": "pack-117",
+      "theme": "understand, find out, interpret",
+      "gloss": "work out meaning",
+      "words": [
+        {
+          "id": 72,
+          "word": "ascertain"
+        },
+        {
+          "id": 348,
+          "word": "fathom"
+        },
+        {
+          "id": 168,
+          "word": "construe"
+        },
+        {
+          "id": 947,
+          "word": "unearth"
+        },
+        {
+          "id": 861,
+          "word": "sound"
+        }
+      ]
+    },
+    {
+      "id": "pack-118",
+      "theme": "declare, assert",
+      "gloss": "state firmly",
+      "words": [
+        {
+          "id": 90,
+          "word": "aver"
+        },
+        {
+          "id": 635,
+          "word": "opine"
+        }
+      ]
+    },
+    {
+      "id": "pack-119",
+      "theme": "attribute or credit to",
+      "gloss": "assign cause or blame",
+      "words": [
+        {
+          "id": 74,
+          "word": "ascribe"
+        },
+        {
+          "id": 458,
+          "word": "impute"
+        }
+      ]
+    },
+    {
+      "id": "pack-120",
+      "theme": "tolerate, permit, approve",
+      "gloss": "put up with or allow",
+      "words": [
+        {
+          "id": 115,
+          "word": "brook"
+        },
+        {
+          "id": 160,
+          "word": "condone"
+        },
+        {
+          "id": 185,
+          "word": "countenance"
+        },
+        {
+          "id": 825,
+          "word": "sanction"
+        }
+      ]
+    },
+    {
+      "id": "pack-121",
+      "theme": "instruct and inform",
+      "gloss": "teach or let know",
+      "words": [
+        {
+          "id": 227,
+          "word": "didactic"
+        },
+        {
+          "id": 285,
+          "word": "edify"
+        },
+        {
+          "id": 470,
+          "word": "inculcate"
+        },
+        {
+          "id": 60,
+          "word": "apprise"
+        },
+        {
+          "id": 236,
+          "word": "disabuse"
+        },
+        {
+          "id": 479,
+          "word": "inform"
+        }
+      ]
+    },
+    {
+      "id": "pack-122",
+      "theme": "surpass, overshadow, replace",
+      "gloss": "outdo or displace",
+      "words": [
+        {
+          "id": 284,
+          "word": "eclipse"
+        },
+        {
+          "id": 646,
+          "word": "overshadow"
+        },
+        {
+          "id": 645,
+          "word": "outstrip"
+        },
+        {
+          "id": 896,
+          "word": "supersede"
+        },
+        {
+          "id": 897,
+          "word": "supplant"
+        }
+      ]
+    },
+    {
+      "id": "pack-123",
+      "theme": "practical, workable",
+      "gloss": "realistic and effective",
+      "words": [
+        {
+          "id": 715,
+          "word": "pragmatic"
+        },
+        {
+          "id": 967,
+          "word": "viable"
+        },
+        {
+          "id": 351,
+          "word": "feasible"
+        },
+        {
+          "id": 333,
+          "word": "expedient"
+        },
+        {
+          "id": 286,
+          "word": "efficacy"
+        }
+      ]
+    },
+    {
+      "id": "pack-124",
+      "theme": "ineffective",
+      "gloss": "not achieving anything",
+      "words": [
+        {
+          "id": 380,
+          "word": "futile"
+        },
+        {
+          "id": 188,
+          "word": "counterproductive"
+        }
+      ]
+    },
+    {
+      "id": "pack-125",
+      "theme": "lucky, chance, favorable",
+      "gloss": "happening by luck",
+      "words": [
+        {
+          "id": 372,
+          "word": "fortuitous"
+        },
+        {
+          "id": 364,
+          "word": "fluke"
+        },
+        {
+          "id": 755,
+          "word": "providential"
+        },
+        {
+          "id": 750,
+          "word": "propitious"
+        },
+        {
+          "id": 410,
+          "word": "hapless",
+          "nuance": "unlucky"
+        }
+      ]
+    },
+    {
+      "id": "pack-126",
+      "theme": "unplanned, improvised",
+      "gloss": "done without preparation",
+      "words": [
+        {
+          "id": 337,
+          "word": "extemporaneous"
+        },
+        {
+          "id": 630,
+          "word": "offhand"
+        },
+        {
+          "id": 566,
+          "word": "makeshift"
+        },
+        {
+          "id": 459,
+          "word": "inadvertent"
+        }
+      ]
+    },
+    {
+      "id": "pack-127",
+      "theme": "group and gather",
+      "gloss": "collect, or a gathered set",
+      "words": [
+        {
+          "id": 184,
+          "word": "coterie",
+          "nuance": "exclusive clique"
+        },
+        {
+          "id": 690,
+          "word": "phalanx",
+          "nuance": "tight group"
+        },
+        {
+          "id": 104,
+          "word": "bevy"
+        },
+        {
+          "id": 383,
+          "word": "garner",
+          "nuance": "collect"
+        },
+        {
+          "id": 776,
+          "word": "reap",
+          "nuance": "collect"
+        },
+        {
+          "id": 366,
+          "word": "forage",
+          "nuance": "collect"
+        },
+        {
+          "id": 178,
+          "word": "convoke"
+        }
+      ]
+    },
+    {
+      "id": "pack-128",
+      "theme": "wandering, traveling",
+      "gloss": "moving place to place",
+      "words": [
+        {
+          "id": 511,
+          "word": "itinerant"
+        },
+        {
+          "id": 680,
+          "word": "peregrinate"
+        },
+        {
+          "id": 684,
+          "word": "peripatetic"
+        },
+        {
+          "id": 512,
+          "word": "itinerary"
+        }
+      ]
+    },
+    {
+      "id": "pack-129",
+      "theme": "radiant, splendid",
+      "gloss": "shining or magnificent",
+      "words": [
+        {
+          "id": 560,
+          "word": "luminous"
+        },
+        {
+          "id": 786,
+          "word": "refulgent"
+        },
+        {
+          "id": 648,
+          "word": "palatial"
+        },
+        {
+          "id": 890,
+          "word": "sublime"
+        },
+        {
+          "id": 762,
+          "word": "pulchritude",
+          "nuance": "beauty"
+        }
+      ]
+    },
+    {
+      "id": "pack-130",
+      "theme": "pastoral, idyllic",
+      "gloss": "peaceful countryside",
+      "words": [
+        {
+          "id": 116,
+          "word": "bucolic"
+        },
+        {
+          "id": 434,
+          "word": "idyllic"
+        },
+        {
+          "id": 961,
+          "word": "verdant"
+        },
+        {
+          "id": 820,
+          "word": "rustic"
+        },
+        {
+          "id": 963,
+          "word": "vernal"
+        },
+        {
+          "id": 407,
+          "word": "halcyon"
+        }
+      ]
+    },
+    {
+      "id": "pack-131",
+      "theme": "pale, withered",
+      "gloss": "lacking color or substance",
+      "words": [
+        {
+          "id": 979,
+          "word": "wan"
+        },
+        {
+          "id": 650,
+          "word": "pallid"
+        },
+        {
+          "id": 991,
+          "word": "wizened"
+        },
+        {
+          "id": 297,
+          "word": "emaciate"
+        },
+        {
+          "id": 219,
+          "word": "desiccate"
+        }
+      ]
+    },
+    {
+      "id": "pack-132",
+      "theme": "summary frame of a work",
+      "gloss": "opening or closing section",
+      "words": [
+        {
+          "id": 744,
+          "word": "prologue"
+        },
+        {
+          "id": 718,
+          "word": "preamble"
+        },
+        {
+          "id": 147,
+          "word": "coda",
+          "nuance": "ending"
+        }
+      ]
+    },
+    {
+      "id": "pack-133",
+      "theme": "cut and tear",
+      "gloss": "sever or hack off",
+      "words": [
+        {
+          "id": 791,
+          "word": "rend"
+        },
+        {
+          "id": 421,
+          "word": "hew"
+        },
+        {
+          "id": 11,
+          "word": "abscission"
+        }
+      ]
+    },
+    {
+      "id": "pack-134",
+      "theme": "religious and sacred",
+      "gloss": "devout, holy",
+      "words": [
+        {
+          "id": 695,
+          "word": "pious"
+        },
+        {
+          "id": 810,
+          "word": "reverent"
+        },
+        {
+          "id": 821,
+          "word": "sacrosanct"
+        },
+        {
+          "id": 844,
+          "word": "seraphic"
+        },
+        {
+          "id": 50,
+          "word": "anoint"
+        }
+      ]
+    },
+    {
+      "id": "pack-135",
+      "theme": "troubling, disturbing",
+      "gloss": "causing unease",
+      "words": [
+        {
+          "id": 238,
+          "word": "discomfiting"
+        },
+        {
+          "id": 254,
+          "word": "disquieting"
+        },
+        {
+          "id": 413,
+          "word": "harrow"
+        }
+      ]
+    },
+    {
+      "id": "pack-136",
+      "theme": "silly, immature",
+      "gloss": "foolish or childish",
+      "words": [
+        {
+          "id": 349,
+          "word": "fatuous"
+        },
+        {
+          "id": 758,
+          "word": "puerile"
+        }
+      ]
+    },
+    {
+      "id": "pack-137",
+      "theme": "lax, negligent",
+      "gloss": "not strict or attentive",
+      "words": [
+        {
+          "id": 538,
+          "word": "lax"
+        },
+        {
+          "id": 851,
+          "word": "slack"
+        },
+        {
+          "id": 153,
+          "word": "complacent"
+        }
+      ]
+    },
+    {
+      "id": "pack-138",
+      "theme": "loyalty and unity",
+      "gloss": "faithful adherence",
+      "words": [
+        {
+          "id": 356,
+          "word": "fidelity"
+        },
+        {
+          "id": 858,
+          "word": "solidarity"
+        },
+        {
+          "id": 22,
+          "word": "adhere"
+        }
+      ]
+    },
+    {
+      "id": "pack-139",
+      "theme": "nonconformist",
+      "gloss": "rebel against the norm",
+      "words": [
+        {
+          "id": 431,
+          "word": "iconoclast"
+        },
+        {
+          "id": 575,
+          "word": "maverick"
+        }
+      ]
+    },
+    {
+      "id": "pack-140",
+      "theme": "clear of blame",
+      "gloss": "free from guilt",
+      "words": [
+        {
+          "id": 329,
+          "word": "exculpate"
+        },
+        {
+          "id": 332,
+          "word": "exonerate"
+        }
+      ]
+    },
+    {
+      "id": "pack-141",
+      "theme": "revival",
+      "gloss": "coming back to life or activity",
+      "words": [
+        {
+          "id": 782,
+          "word": "recrudescent"
+        },
+        {
+          "id": 806,
+          "word": "resurgent"
+        }
+      ]
+    },
+    {
+      "id": "pack-142",
+      "theme": "tact and finesse",
+      "gloss": "diplomatic skill",
+      "words": [
+        {
+          "id": 709,
+          "word": "politic"
+        },
+        {
+          "id": 358,
+          "word": "finesse"
+        }
+      ]
+    },
+    {
+      "id": "pack-143",
+      "theme": "best or ideal",
+      "gloss": "most favorable",
+      "words": [
+        {
+          "id": 637,
+          "word": "optimal"
+        },
+        {
+          "id": 638,
+          "word": "optimum"
+        },
+        {
+          "id": 656,
+          "word": "paragon"
+        }
+      ]
+    },
+    {
+      "id": "pack-144",
+      "theme": "important or chief",
+      "gloss": "of primary importance",
+      "words": [
+        {
+          "id": 129,
+          "word": "cardinal"
+        },
+        {
+          "id": 731,
+          "word": "primacy"
+        },
+        {
+          "id": 616,
+          "word": "nontrivial"
+        }
+      ]
+    },
+    {
+      "id": "pack-145",
+      "theme": "substitute",
+      "gloss": "stands in for another",
+      "words": [
+        {
+          "id": 756,
+          "word": "proxy"
+        },
+        {
+          "id": 903,
+          "word": "surrogate"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,918 @@
+PACK
+theme: praise and approval
+gloss: formal or warm praise; worthy of praise
+words: approbation, encomium, panegyric, eulogy, kudos, laudable, lionize
+nuances:
+eulogy: praise spoken at a funeral
+laudable: adjective, "deserving praise"
+lionize: treat as a celebrity
+
+PACK
+theme: respect, reverence, distinction
+gloss: deep respect, or worthy of it
+words: venerate, deference, homage, august, estimable, eminent
+nuances:
+deference: yielding to another's authority or opinion
+august/eminent/estimable: describe the admired person
+
+PACK
+theme: scold or attack harshly in words
+gloss: severe verbal criticism, from reprimand to abusive rant
+words: castigate, censure, upbraid, reproach, admonish, harangue, tirade, diatribe, invective, vituperate, fulminate, vitriol, polemic
+nuances:
+admonish: mild, cautioning
+polemic: argumentative attack on an idea
+harangue/tirade/diatribe: long, loud, bitter speech
+
+PACK
+theme: curses
+gloss: a curse
+words: imprecation, malediction
+
+PACK
+theme: belittle, mock, slander
+gloss: attack someone's reputation or ridicule them
+words: denigrate, disparage, deride, lampoon, aspersions, calumny, impugn, discredit, pejorative
+nuances:
+lampoon: satirical ridicule
+calumny: malicious lie
+pejorative: a derogatory word or adjective
+
+PACK
+theme: sharp, biting tone
+gloss: harsh, sour, cutting in manner or speech
+words: acerbic, acidulous, caustic, scathing, trenchant, pungent, sardonic, asperity
+nuances:
+trenchant: forceful and incisive, not always negative
+sardonic: scornful, mocking
+
+PACK
+theme: abundance and excess
+gloss: plenty, often too much
+words: copious, plethora, profuse, replete, surfeit, slew, spate, welter, inordinate, satiate, inundate
+nuances:
+inordinate: excessive
+satiate: fill to excess
+inundate: overwhelm with a flood
+
+PACK
+theme: spread everywhere, saturate
+gloss: present or soaking throughout
+words: ubiquitous, pervasive, rife, permeate, saturate, imbue, steeped
+nuances:
+rife: abundant, widespread (usually bad things)
+imbue/steeped: thoroughly infused
+
+PACK
+theme: scarce, tiny amount
+gloss: a very small amount, or not enough
+words: paucity, scant, scintilla, modicum, vestige
+
+PACK
+theme: poverty
+gloss: extreme lack of money
+words: impecunious, indigence, penury, mendicant
+nuances:
+mendicant: beggar
+
+PACK
+theme: trivial, unimportant
+gloss: too small to matter
+words: trifling, inconsequential, nominal, token, slight, peccadillo
+nuances:
+nominal/token: in name only, merely symbolic
+peccadillo: minor fault
+
+PACK
+theme: talkative and wordy
+gloss: talking or writing too much
+words: garrulous, loquacious, voluble, verbose, prolix, prattle, diffuse
+nuances:
+prattle: idle chatter
+diffuse: wordy or spread out
+
+PACK
+theme: pompous, inflated style
+gloss: overblown, showy language or manner
+words: bombastic, grandiloquent, orotund, turgid, florid, rococo, overwrought, declaim
+nuances:
+declaim: speak in an oratorical way
+overwrought: also means agitated
+
+PACK
+theme: few words, reserved
+gloss: saying little
+words: laconic, taciturn, reticent, terse
+nuances:
+laconic/terse: concise
+taciturn/reticent: reserved, reluctant to talk
+
+PACK
+theme: summarize, condense, essence
+gloss: shorten, or the core meaning
+words: abridge, précis, compendium, synoptic, recapitulate, distill, gist, pith, pare
+nuances:
+compendium: concise but complete collection
+pare: trim off outer parts
+
+PACK
+theme: soothe, appease
+gloss: calm anger or ease distress
+words: assuage, mollify, placate, propitiate, conciliatory, console, lull, slake
+nuances:
+lull: can mean falsely reassure
+slake: satisfy thirst or desire
+
+PACK
+theme: lessen severity, relieve
+gloss: make less intense or painful
+words: abate, alleviate, mitigate, palliate, subside, anodyne, analgesia
+nuances:
+subside: die down
+anodyne: soothing or a painkiller
+palliate: ease symptoms without curing
+
+PACK
+theme: weaken, drain strength
+gloss: reduce force or vigor
+words: enervate, impair, sap, undermine, attenuate
+
+PACK
+theme: formally give up, retract, revoke
+gloss: renounce, cancel, or surrender
+words: abdicate, abjure, recant, repudiate, rescind, annul, forfeit, divest, jettison, doff
+nuances:
+abdicate/abjure: give up formally
+recant: take back a statement
+rescinds/annul: cancel a law or rule
+forfeit: lose through failing an obligation
+jettison/doff: cast off
+
+PACK
+theme: disprove or contradict
+gloss: show or declare something false
+words: refute, debunk, gainsay, belie, negate
+nuances:
+belie: contradict or misrepresent
+
+PACK
+theme: stubborn, disobedient
+gloss: resisting change, control, or authority
+words: obdurate, obstinate, intransigent, implacable, inexorable, intractable, recalcitrant, refractory, contumacious, restive
+nuances:
+inexorable/implacable: cannot be moved or appeased
+restive: uneasy under control
+
+PACK
+theme: yielding, compliant, agreeable
+gloss: willing to go along or give in
+words: concur, accede, concede, compliant, complaisant, tractable, malleable, plastic
+nuances:
+malleable/plastic: easily shaped or influenced
+
+PACK
+theme: servile flattery
+gloss: fawning to win favor
+words: obsequious, sycophant, toady, fawn, grovel, ingratiate, supplicate
+nuances:
+supplicate: beg humbly
+
+PACK
+theme: object, disagree, quibble
+gloss: express opposition or petty objection
+words: dissent, demur, balk, quibble
+nuances:
+quibble: trivial objection
+
+PACK
+theme: fight and combat
+gloss: aggressive, quarrelsome, attacking
+words: pugnacious, truculent, contentious, fractious, pugilism, fracas, assail, besiege
+nuances:
+pugilism: boxing
+fracas: brawl
+besiege: surround and attack
+
+PACK
+theme: bad-tempered, angry, irritable
+gloss: easily angered or sour
+words: irascible, livid, umbrage, surly, dyspeptic, curmudgeon, querulous, glower, grouse
+nuances:
+umbrage: offense taken
+querulous/grouse: complaining
+glower: angry stare
+
+PACK
+theme: annoy, provoke hostility
+gloss: irritate or make unfriendly
+words: nettle, vex, abrasive, grating, antagonize, alienate
+
+PACK
+theme: calm and composed
+gloss: peaceful, untroubled
+words: equanimity, imperturbable, placid, repose, seraphic
+
+PACK
+theme: unemotional, indifferent
+gloss: showing little feeling
+words: impassive, stoic, stolid, phlegmatic, apathy, indifferent, aloof, insensible
+nuances:
+aloof: distant, reserved
+insensible: unable to feel
+
+PACK
+theme: unbiased and fair
+gloss: not favoring any side
+words: impartial, disinterested, objective, equitable, detached, dispassionate
+
+PACK
+theme: sluggish, lazy, weary
+gloss: lacking energy
+words: lethargic, languid, listless, lassitude, torpor, indolent, lackluster, soporific, dilatory, flag
+nuances:
+dilatory: slow, procrastinating
+soporific: sleep-inducing
+flag: grow tired
+
+PACK
+theme: inactive, dormant
+gloss: not currently active but may revive
+words: dormant, quiescent, fallow, abeyance, latent, inert, stasis
+
+PACK
+theme: unchanging, fixed
+gloss: not changing
+words: immutable, static, perennial, status quo
+nuances:
+perennial: lasting or recurring
+
+PACK
+theme: timid, fearful
+gloss: lacking courage
+words: craven, pusillanimous, timorous, diffident, skittish
+nuances:
+diffident: shy, lacking confidence
+skittish: easily startled
+
+PACK
+theme: brave, bold
+gloss: fearless
+words: intrepid, plucky, hardy, audacious
+nuances:
+audacious: can be rude or reckless
+
+PACK
+theme: overstepping, arrogant, presumptuous
+gloss: taking more authority or liberty than warranted
+words: effrontery, presumptuous, arrogate, officious, imperious, patronizing
+nuances:
+officious: meddlesome
+patronizing: condescending
+
+PACK
+theme: cautious, wary
+gloss: careful about risk
+words: circumspect, wary, prudent
+nuances:
+prudent: also means wise about the future
+
+PACK
+theme: distrustful, doubtful
+gloss: inclined to doubt others
+words: cynical, skeptic, dubious, leery, misanthrope
+nuances:
+misanthrope: hater of humankind
+
+PACK
+theme: wise, discerning, perceptive
+gloss: good judgment and insight
+words: sagacious, perspicacious, judicious, discerning, discriminating, acumen, keen, prescient
+nuances:
+prescient: foresight
+acumen: a noun, "sharp judgment"
+
+PACK
+theme: learned, expert
+gloss: knowledgeable
+words: erudite, savant, connoisseur, conversant, pedant
+nuances:
+pedant: shows off learning
+connoisseur: expert in the fine arts
+
+PACK
+theme: beginner, amateur, just starting
+gloss: new, inexperienced, or at an early stage
+words: neophyte, tyro, fledgling, dilettante, nascent, incipient, inchoate
+nuances:
+dilettante: superficial amateur
+nascent/incipient/inchoate: just beginning
+
+PACK
+theme: gullible, naive
+gloss: easily fooled
+words: credulous, naive
+
+PACK
+theme: enthusiastic, passionate
+gloss: eager and intense
+words: ardent, avid, zeal, fervid, torrid, vim, alacrity
+nuances:
+alacrity: cheerful speed
+torrid: also means very hot
+
+PACK
+theme: cheerful, joyful, playful
+gloss: high spirits and humor
+words: blithe, elated, ebullient, sanguine, mirth, levity, jocular, facetious, droll, sportive, gambol
+nuances:
+blithe: can mean carelessly carefree
+facetious: joking at the wrong time
+sanguine: optimistic
+
+PACK
+theme: whimsical, impractical idealism
+gloss: fanciful, led by whims or ideals
+words: whimsical, fanciful, quixotic
+
+PACK
+theme: friendly, sociable
+gloss: warm and approachable
+words: affable, bonhomie, gregarious, winsome
+
+PACK
+theme: gloom, sorrow, mourning
+gloss: sad, mournful, or expressions of grief
+words: lugubrious, morose, lachrymose, maudlin, lament, dirge, elegy, knell, grievous
+nuances:
+maudlin: sentimental to excess
+dirge/elegy/knell: songs, poems, sounds of mourning
+
+PACK
+theme: remorse
+gloss: regret for wrongdoing
+words: contrite, penitent, rue
+
+PACK
+theme: generous
+gloss: giving freely
+words: beneficent, magnanimous, munificent, largess, philanthropy, liberal, unsparing, lavish, prodigal
+nuances:
+prodigal: also means wasteful
+largess: giving with a hint of superiority
+
+PACK
+theme: greedy, grasping
+gloss: excessive desire for money
+words: avarice, cupidity, stingy
+
+PACK
+theme: swindle, steal, extort
+gloss: obtain money dishonestly
+words: graft, larceny, bilk, gouge, usury
+nuances:
+usury: excessive interest
+
+PACK
+theme: frugal, austere, self-denying
+gloss: simple living and restraint
+words: frugal, spartan, austere, ascetic, monastic, temperance, abstain, husband, stint
+nuances:
+husband: manage sparingly
+abstain: refrain (or decline to vote)
+
+PACK
+theme: pleasure-seeking, indulgent
+gloss: devoted to pleasure, often immoral
+words: hedonist, sybarite, epicure, libertine, licentious, wanton, profligate
+nuances:
+epicure: refined tastes
+profligate: also wasteful
+
+PACK
+theme: fake, false, spurious
+gloss: not genuine or true
+words: bogus, phony, ersatz, apocryphal, specious, fallacious, erroneous, canard
+nuances:
+specious: seems true but is false
+canard: false rumor
+ersatz: inferior substitute
+
+PACK
+theme: showy, pretentious
+gloss: false or flashy display
+words: ostentatious, pretentious, affectation, mannered, tawdry, meretricious
+nuances:
+meretricious: flashy but worthless
+affectation: fake behavior to impress
+
+PACK
+theme: honest, sincere
+gloss: open and truthful
+words: candid, ingenuous, artless, probity, veracity, principled
+nuances:
+ingenuous: can also mean naive
+
+PACK
+theme: lying, double-dealing
+gloss: deceiving or avoiding the truth
+words: mendacious, prevaricate, equivocate, dissemble, duplicity, disingenuous, malinger
+nuances:
+equivocate: use vague words to avoid commitment
+malinger: fake illness
+
+PACK
+theme: cunning, trickery, scheming
+gloss: deceit through cleverness
+words: guile, chicanery, crafty, wily, legerdemain, stratagem, machinations, collude, hoodwink, dupe, inveigle
+nuances:
+collude: conspire
+hoodwink/dupe: to trick (dupe also a noun, the victim)
+inveigle: lure with flattery
+
+PACK
+theme: secretive
+gloss: hidden or stealthy
+words: covert, furtive, abscond
+
+PACK
+theme: disloyal, treacherous
+gloss: betraying trust
+words: perfidious, treacherous, apostate
+
+PACK
+theme: wicked, dishonorable
+gloss: morally low
+words: iniquity, turpitude, reprobate, ignoble, base, scurvy, unconscionable, transgression, impious
+
+PACK
+theme: flagrantly bad
+gloss: glaringly offensive
+words: egregious, grievous
+
+PACK
+theme: disgrace and ill repute
+gloss: shame or bad reputation
+words: notoriety, stigma, opprobrium, pariah
+
+PACK
+theme: foul, disgusting
+gloss: repulsive
+words: fetid, noisome, squalid, cloying, abhor
+nuances:
+abhor: verb, "detest"
+cloying: sickeningly sweet
+
+PACK
+theme: spoil and degrade
+gloss: lower quality, make impure or damaged
+words: debase, abase, adulterate, sully, deface, mar, blight
+
+PACK
+theme: harmful
+gloss: causing damage
+words: deleterious, pernicious, inimical, adverse, bane, virulent, pathogenic, invidious
+
+PACK
+theme: harmless, healthy
+gloss: not dangerous
+words: benign, innocuous, salubrious, aseptic
+
+PACK
+theme: changeable, unpredictable
+gloss: shifting or erratic
+words: capricious, mercurial, volatile, erratic, inconstancy, vicissitude, sporadic, desultory, impetuous
+nuances:
+sporadic/desultory: irregular
+impetuous: impulsive
+
+PACK
+theme: indecisive, wavering
+gloss: unable to settle
+words: vacillate, oscillate, irresolute, dither, ambivalent, hedge
+
+PACK
+theme: short-lived
+gloss: lasting briefly
+words: ephemeral, fleeting, transitory
+
+PACK
+theme: inherent, essential
+gloss: built into the nature of something
+words: inherent, intrinsic, ingrained, per se, endemic, hallmark
+
+PACK
+theme: inclination and tendency
+gloss: natural leaning
+words: bent, penchant, proclivity, propensity, predilection, predisposed, disposition
+
+PACK
+theme: abnormal, odd, inconsistent
+gloss: deviating from the norm
+words: aberrant, anomaly, eccentric, idiosyncrasy, incongruous, discrepancy
+
+PACK
+theme: opposite and contradictory
+gloss: opposed in nature
+words: antithetical, contraries, paradox, counterintuitive
+
+PACK
+theme: split and division
+gloss: divide into parts or factions
+words: bifurcate, dichotomy, rift, faction, polarized, diverge
+
+PACK
+theme: diverse, varied
+gloss: made of different kinds
+words: heterogeneous, multifarious, variegated, eclectic, disparate, discrete, hodgepodge, pastiche, panoply, spectrum, polyglot
+nuances:
+discrete: separate
+panoply: impressive array
+hodgepodge/pastiche: jumble or mix
+
+PACK
+theme: equivalent, matching
+gloss: comparable or corresponding
+words: analogous, commensurate, complementary, homogeneous, synchronous, simultaneous
+nuances:
+homogeneous: uniform
+synchronous/simultaneous: at the same time
+
+PACK
+theme: merge and combine
+gloss: bring together
+words: amalgamate, coalesce, consolidate, converge, incorporate, dovetail, aggregate, coagulate
+nuances:
+coagulate: liquid becomes solid
+
+PACK
+theme: spread and scatter
+gloss: send widely
+words: disperse, disseminate, propagate, peddle
+
+PACK
+theme: grow and expand
+gloss: increase in size or amount
+words: augment, accretion, burgeon, proliferate, balloon, dilate, distend, fecund, crescendo
+nuances:
+fecund: fruitful
+crescendo: steady increase in intensity
+
+PACK
+theme: exaggerate, embellish
+gloss: overstate
+words: embellish, aggrandize, hyberbole
+nuances:
+hyberbole: spelled this way in your list
+
+PACK
+theme: improve and repair
+gloss: make better or put right
+words: ameliorate, enhance, revamp, redress, remedial, elevate
+
+PACK
+theme: strengthen and support
+gloss: reinforce, or back with evidence
+words: bolster, buttress, fortify, corroborate, substantiate, document, underscore
+
+PACK
+theme: provoke and cause
+gloss: stir up or bring about
+words: foment, kindle, goad, whet, elicit, engender, precipitate, exacerbate, catalyst, incentive
+nuances:
+exacerbate: make worse
+catalyst: causer of change
+
+PACK
+theme: rebellion and unrest
+gloss: stirring up revolt
+words: sedition, insurrection, incendiary
+
+PACK
+theme: chaos and turmoil
+gloss: disorder
+words: anarchy, maelstrom, welter, tumultuous, frenetic
+
+PACK
+theme: tangled, confusing
+gloss: complicated or incoherent
+words: convoluted, tortuous, disjointed, confound
+
+PACK
+theme: loud, harsh noise
+gloss: unpleasant or powerful sound
+words: cacophony, dissonance, discordant, din, clamor, stentorian, vociferous, baying
+nuances:
+stentorian: powerful (voice)
+vociferous: noisily protesting
+
+PACK
+theme: clear and obvious
+gloss: easily understood or seen
+words: lucid, pellucid, limpid, intelligible, explicit, unequivocal, articulate, patent, manifest, salient, pronounced
+
+PACK
+theme: obscure, known to few
+gloss: hard to grasp, secret
+words: arcane, esoteric, recondite, occult, metaphysical
+nuances:
+metaphysical: also abstract
+
+PACK
+theme: ambiguous, vague
+gloss: not clear or fixed
+words: ambiguous, indeterminate, oblique, opaque
+
+PACK
+theme: impenetrable, sealed
+gloss: not allowing passage
+words: impermeable, impervious, hermetic
+
+PACK
+theme: persuasive, plausible
+gloss: convincing
+words: eloquent, cogent, plausible, verisimilar
+
+PACK
+theme: puzzle, dilemma
+gloss: a baffling problem
+words: enigma, conundrum, quandary
+
+PACK
+theme: unstated, implied
+gloss: suggested not said
+words: implicit, tacit, connote, insinuate, implication, denote
+nuances:
+denote: literal meaning (contrast with connote)
+
+PACK
+theme: relevant, suitable
+gloss: fitting and on-topic
+words: germane, apposite, felicitous, timely
+
+PACK
+theme: irrelevant, off-topic, marginal
+gloss: not central
+words: extraneous, tangential, digress, peripheral, fringe
+
+PACK
+theme: proper behavior
+gloss: good manners and conduct
+words: decorous, propriety, mores
+
+PACK
+theme: rude, awkward, uncouth
+gloss: lacking social grace
+words: gauche, gawky, boor, philistine, unseemly, solecism, lumber, ponderous
+nuances:
+lumber/ponderous: heavy, clumsy movement or style
+
+PACK
+theme: dull, cliché, unoriginal
+gloss: stale, ordinary
+words: banal, trite, hackneyed, platitude, pedestrian, prosaic, mundane, quotidian, insipid, monotony, derivative
+nuances:
+quotidian: daily
+derivative: copied from others
+
+PACK
+theme: principle and saying
+gloss: accepted truth or belief
+words: axiom, maxim, dictum, dogma, ethos, paradigm, normative, canonical, orthodox
+
+PACK
+theme: biased, narrow-minded
+gloss: one-sided or closed to other views
+words: partial, partisan, tendentious, doctrinaire, chauvinism, jingoism, illiberality, fanatical, insular, myopic
+
+PACK
+theme: broad-minded, universal
+gloss: open to all
+words: catholic, cosmopolitan, liberal, egalitarian
+
+PACK
+theme: old, outdated
+gloss: belonging to the past
+words: archaic, obsolete, anachronism, bygone, hoary, erstwhile, vintage
+nuances:
+erstwhile: former
+anachronism: something in the wrong time
+
+PACK
+theme: foretell and foreshadow
+gloss: signal what is coming
+words: foreshadow, augury, prophetic, adumbrate, precursor, divine
+nuances:
+adumbrate: outline or reveal partially
+
+PACK
+theme: new and pioneering
+gloss: never seen before
+words: novel, unprecedented
+
+PACK
+theme: advocate and leader
+gloss: champion or lead a cause
+words: advocate, exponent, activism, apostle, spearhead, vanguard
+
+PACK
+theme: power and rulers
+gloss: authority and those who hold it
+words: hegemony, plutocracy, puissance, primacy, potentate, magnate, arbiter
+
+PACK
+theme: rank and layers
+gloss: levels in a series
+words: hierarchy, echelon, stratum, gradation, standing, ranks
+
+PACK
+theme: peak and bottom
+gloss: highest or lowest point
+words: acme, zenith, culminate, nadir, abyss, declivity, plummet
+nuances:
+acme/zenith/culminate: top
+nadir/abyss/declivity/plummet: bottom or downward
+
+PACK
+theme: diligent and painstaking
+gloss: careful, persistent effort
+words: assiduous, sedulous, indefatigable, meticulous, fastidious
+
+PACK
+theme: demanding, burdensome
+gloss: hard to bear
+words: arduous, onerous, exigent, exacting, yoke
+
+PACK
+theme: hinder and prevent
+gloss: block or discourage
+words: impede, stymie, forestall, deterrent, obviate, pre-empt, daunt, prohibitive
+
+PACK
+theme: restrict, suppress, censor
+gloss: limit or silence
+words: circumscribe, delimit, constrict, proscribe, expurgate, squelch, occlude
+
+PACK
+theme: specify and list
+gloss: state precisely
+words: stipulate, enumerate, delineate
+
+PACK
+theme: guess and suppose
+gloss: infer or assume without full proof
+words: surmise, speculate, posit, supposition, presumptive, extrapolate, deem
+
+PACK
+theme: understand, find out, interpret
+gloss: work out meaning
+words: ascertain, fathom, construe, unearth, sound
+
+PACK
+theme: declare, assert
+gloss: state firmly
+words: aver, opine
+
+PACK
+theme: attribute or credit to
+gloss: assign cause or blame
+words: ascribe, impute
+
+PACK
+theme: tolerate, permit, approve
+gloss: put up with or allow
+words: brook, condone, countenance, sanction
+
+PACK
+theme: instruct and inform
+gloss: teach or let know
+words: didactic, edify, inculcate, apprise, disabuse, inform
+
+PACK
+theme: surpass, overshadow, replace
+gloss: outdo or displace
+words: eclipse, overshadow, outstrip, supersede, supplant
+
+PACK
+theme: practical, workable
+gloss: realistic and effective
+words: pragmatic, viable, feasible, expedient, efficacy
+
+PACK
+theme: ineffective
+gloss: not achieving anything
+words: futile, counterproductive
+
+PACK
+theme: lucky, chance, favorable
+gloss: happening by luck
+words: fortuitous, fluke, providential, propitious, hapless
+nuances:
+hapless: unlucky
+
+PACK
+theme: unplanned, improvised
+gloss: done without preparation
+words: extemporaneous, offhand, makeshift, inadvertent
+
+PACK
+theme: group and gather
+gloss: collect, or a gathered set
+words: coterie, phalanx, bevy, garner, reap, forage, convoke
+nuances:
+coterie: exclusive clique
+phalanx: tight group
+garner/reap/forage: collect
+
+PACK
+theme: wandering, traveling
+gloss: moving place to place
+words: itinerant, peregrinate, peripatetic, itinerary
+
+PACK
+theme: radiant, splendid
+gloss: shining or magnificent
+words: luminous, refulgent, palatial, sublime, pulchritude
+nuances:
+pulchritude: beauty
+
+PACK
+theme: pastoral, idyllic
+gloss: peaceful countryside
+words: bucolic, idyllic, verdant, rustic, vernal, halcyon
+
+PACK
+theme: pale, withered
+gloss: lacking color or substance
+words: wan, pallid, wizened, emaciate, desiccate
+
+PACK
+theme: summary frame of a work
+gloss: opening or closing section
+words: prologue, preamble, coda
+nuances:
+coda: ending
+
+PACK
+theme: cut and tear
+gloss: sever or hack off
+words: rend, hew, pare, abscission
+
+PACK
+theme: religious and sacred
+gloss: devout, holy
+words: pious, reverent, sacrosanct, seraphic, anoint
+
+PACK
+theme: troubling, disturbing
+gloss: causing unease
+words: discomfiting, disquieting, harrow
+
+PACK
+theme: silly, immature
+gloss: foolish or childish
+words: fatuous, puerile
+
+PACK
+theme: lax, negligent
+gloss: not strict or attentive
+words: lax, slack, complacent
+
+PACK
+theme: loyalty and unity
+gloss: faithful adherence
+words: fidelity, solidarity, adhere
+
+PACK
+theme: nonconformist
+gloss: rebel against the norm
+words: iconoclast, maverick
+
+PACK
+theme: clear of blame
+gloss: free from guilt
+words: exculpate, exonerate
+
+PACK
+theme: revival
+gloss: coming back to life or activity
+words: recrudescent, resurgent
+
+PACK
+theme: tact and finesse
+gloss: diplomatic skill
+words: politic, finesse
+
+PACK
+theme: best or ideal
+gloss: most favorable
+words: optimal, optimum, paragon
+
+PACK
+theme: important or chief
+gloss: of primary importance
+words: cardinal, primacy, nontrivial
+
+PACK
+theme: substitute
+gloss: stands in for another
+words: proxy, surrogate
