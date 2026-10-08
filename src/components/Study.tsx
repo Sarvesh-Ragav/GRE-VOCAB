@@ -58,6 +58,9 @@ export function Study({
   const progressPct =
     totalEstimate === 0 ? 100 : (seenCount / Math.max(totalEstimate, 1)) * 100
 
+  const showAnswer = phase === 'reveal'
+  const canSelfGrade = showAnswer && !preGradedMiss
+
   function resetCardUi() {
     setDraft('')
     setUsedHelp(false)
@@ -77,6 +80,16 @@ export function Study({
   function startTyping() {
     setPhase('typing')
     setDraft('')
+  }
+
+  function flipCard() {
+    if (!current || phase !== 'prompt') return
+    setPhase('reveal')
+  }
+
+  function markKnown() {
+    if (!current || phase !== 'prompt') return
+    grade('correct')
   }
 
   function handleDontKnow() {
@@ -146,12 +159,43 @@ export function Study({
     if (phase !== 'reveal') return
 
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key !== 'Enter' || e.shiftKey || e.repeat) return
+      if (e.repeat) return
       const tag = (e.target as HTMLElement | null)?.tagName
       if (tag === 'TEXTAREA' || tag === 'INPUT') return
-      e.preventDefault()
-      if (preGradedMiss) continueAfterDontKnow()
-      else grade('correct')
+
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault()
+        if (preGradedMiss) continueAfterDontKnow()
+        else grade('correct')
+        return
+      }
+
+      if (preGradedMiss) return
+
+      if (e.key === 'ArrowRight' || e.key === '1') {
+        e.preventDefault()
+        grade('correct')
+      } else if (e.key === 'ArrowLeft' || e.key === '2') {
+        e.preventDefault()
+        grade('miss')
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  })
+
+  useEffect(() => {
+    if (phase !== 'prompt') return
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.repeat) return
+      const tag = (e.target as HTMLElement | null)?.tagName
+      if (tag === 'TEXTAREA' || tag === 'INPUT') return
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault()
+        flipCard()
+      }
     }
 
     window.addEventListener('keydown', onKeyDown)
@@ -198,31 +242,132 @@ export function Study({
       </header>
 
       <div className="study-stage">
-        <div className="study-hero">
-          <p className="study-label">What does this mean?</p>
-          <h1 className="study-word">{current.word}</h1>
-        </div>
+        <article
+          className={`flash-card${showAnswer ? ' is-flipped' : ''}`}
+          aria-live="polite"
+        >
+          <button
+            type="button"
+            className="flash-card-face"
+            onClick={phase === 'prompt' ? flipCard : undefined}
+            disabled={phase !== 'prompt'}
+            aria-label={
+              phase === 'prompt'
+                ? `Flashcard: ${current.word}. Tap to reveal meaning.`
+                : undefined
+            }
+          >
+            <p className="study-label">
+              {showAnswer ? 'Meaning' : 'What does this mean?'}
+            </p>
+            <h1 className="study-word">{current.word}</h1>
+
+            {showAnswer ? (
+              <div className="flash-card-answer">
+                <p className="flash-meaning">{current.meaning}</p>
+                {current.mnemonic && (
+                  <div className="flash-detail">
+                    <span className="reveal-label">Mnemonic</span>
+                    <p>{current.mnemonic}</p>
+                  </div>
+                )}
+                {current.example && (
+                  <div className="flash-detail flash-example">
+                    <span className="reveal-label">Example</span>
+                    <p>{current.example}</p>
+                  </div>
+                )}
+                {draft.trim() && (
+                  <div className="flash-detail flash-guess">
+                    <span className="reveal-label">You wrote</span>
+                    <p>{draft.trim()}</p>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <p className="flash-hint">
+                Tap to flip · Guess to type · ✓ / ✗ to grade fast
+              </p>
+            )}
+          </button>
+
+          {(phase === 'prompt' || showAnswer) && (
+            <footer className="flash-card-footer">
+              {phase === 'prompt' && (
+                <>
+                  <button
+                    type="button"
+                    className="flash-footer-btn flash-footer-miss"
+                    onClick={handleDontKnow}
+                    aria-label="I don't know"
+                    title="I don't know"
+                  >
+                    <span aria-hidden="true">✗</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-primary flash-guess-btn"
+                    onClick={startTyping}
+                  >
+                    Guess
+                  </button>
+                  <button
+                    type="button"
+                    className="flash-footer-btn flash-footer-ok"
+                    onClick={markKnown}
+                    aria-label="I know it"
+                    title="I know it"
+                  >
+                    <span aria-hidden="true">✓</span>
+                  </button>
+                </>
+              )}
+
+              {canSelfGrade && (
+                <>
+                  <button
+                    type="button"
+                    className="flash-footer-btn flash-footer-miss"
+                    onClick={() => grade('miss')}
+                    aria-label="Missed"
+                    title="Missed"
+                  >
+                    <span aria-hidden="true">✗</span>
+                  </button>
+                  <p className="flash-footer-label">Did you know it?</p>
+                  <button
+                    type="button"
+                    className="flash-footer-btn flash-footer-ok"
+                    onClick={() => grade('correct')}
+                    aria-label="Got it"
+                    title="Got it"
+                  >
+                    <span aria-hidden="true">✓</span>
+                  </button>
+                </>
+              )}
+
+              {preGradedMiss && showAnswer && (
+                <button
+                  type="button"
+                  className="btn btn-primary flash-next-btn"
+                  onClick={continueAfterDontKnow}
+                >
+                  Next word
+                </button>
+              )}
+            </footer>
+          )}
+        </article>
 
         {phase === 'prompt' && (
-          <div className="study-actions">
-            <button type="button" className="btn btn-primary btn-lg" onClick={startTyping}>
-              Guess
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary btn-lg"
-              onClick={handleDontKnow}
-            >
-              I don&apos;t know
-            </button>
-            <button
-              type="button"
-              className="btn btn-ghost btn-lg"
-              onClick={handleSeeOptions}
-            >
-              See options
-            </button>
-          </div>
+          <button
+            type="button"
+            className="btn btn-ghost btn-lg"
+            onClick={handleSeeOptions}
+          >
+            See options
+          </button>
         )}
 
         {phase === 'typing' && (
@@ -255,13 +400,25 @@ export function Study({
             {usedHelp && (
               <p className="help-note">Help was used — counts as helped.</p>
             )}
-            <button
-              type="submit"
-              className="btn btn-primary btn-lg"
-              disabled={!draft.trim()}
-            >
-              Check
-            </button>
+            <div className="typing-actions">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={() => {
+                  setDraft('')
+                  setPhase('prompt')
+                }}
+              >
+                Back
+              </button>
+              <button
+                type="submit"
+                className="btn btn-primary btn-lg"
+                disabled={!draft.trim()}
+              >
+                Check
+              </button>
+            </div>
           </form>
         )}
 
@@ -294,67 +451,24 @@ export function Study({
             >
               Type my answer
             </button>
+            <button
+              type="button"
+              className="btn btn-ghost"
+              onClick={() => {
+                setUsedHelp(false)
+                setOptions([])
+                setPhase('prompt')
+              }}
+            >
+              Back to card
+            </button>
           </div>
         )}
 
-        {phase === 'reveal' && (
-          <div className="study-reveal">
-            {draft.trim() && (
-              <div className="info-card your-answer">
-                <span className="reveal-label">You wrote</span>
-                <p>{draft.trim()}</p>
-              </div>
-            )}
-            <div className="info-card correct-answer">
-              <span className="reveal-label">Meaning</span>
-              <p>{current.meaning}</p>
-            </div>
-            {current.mnemonic && (
-              <div className="info-card mnemonic-card">
-                <span className="reveal-label">Mnemonic</span>
-                <p>{current.mnemonic}</p>
-              </div>
-            )}
-            {current.example && (
-              <div className="info-card example-card">
-                <span className="reveal-label">Example</span>
-                <p>{current.example}</p>
-              </div>
-            )}
-
-            {preGradedMiss ? (
-              <button
-                type="button"
-                className="btn btn-primary btn-lg"
-                onClick={continueAfterDontKnow}
-              >
-                Next word
-              </button>
-            ) : (
-              <div className="grade-row">
-                <button
-                  type="button"
-                  className="btn btn-good btn-lg"
-                  onClick={() => grade('correct')}
-                >
-                  Got it
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-bad btn-lg"
-                  onClick={() => grade('miss')}
-                >
-                  Missed
-                </button>
-              </div>
-            )}
-
-            {(mode === 'revise' || wp?.status === 'mastered') && !preGradedMiss && (
-              <button type="button" className="btn btn-ghost" onClick={onNotConfident}>
-                Not confident — needs revise
-              </button>
-            )}
-          </div>
+        {canSelfGrade && (mode === 'revise' || wp?.status === 'mastered') && (
+          <button type="button" className="btn btn-ghost" onClick={onNotConfident}>
+            Not confident — needs revise
+          </button>
         )}
       </div>
     </div>

@@ -75,7 +75,7 @@ export function Home({
         <p className="home-kicker">GRE Verbal</p>
         <h1 className="home-title">Vocab Drill</h1>
         <p className="home-sub">
-          Type the meaning. No guessing from options unless you need them.
+          Flashcards with ✓ / ✗ for fast revision, or Guess to type the meaning.
         </p>
         <div className="home-overall" aria-label="Overall progress">
           <div className="home-overall-bar">

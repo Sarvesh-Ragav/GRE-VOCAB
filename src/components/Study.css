@@ -55,10 +55,12 @@
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
 }
 
-.study-hero {
-  text-align: center;
-  padding: 0.85rem 0.75rem;
-  border-radius: 1rem;
+.flash-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: min(58vh, 28rem);
+  border-radius: 1.15rem;
   background:
     linear-gradient(
       165deg,
@@ -67,10 +69,46 @@
     );
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.flash-card.is-flipped {
+  background:
+    linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--accent) 14%, var(--surface)) 0%,
+      var(--surface) 55%
+    );
+}
+
+.flash-card-face {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 1.25rem 1.1rem 1rem;
+  text-align: center;
+  cursor: default;
+  color: inherit;
+  font: inherit;
+}
+
+.flash-card-face:not(:disabled) {
+  cursor: pointer;
+}
+
+.flash-card-face:not(:disabled):active {
+  background: color-mix(in srgb, var(--ink) 3%, transparent);
 }
 
 .study-label {
-  margin: 0 0 0.35rem;
+  margin: 0;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -88,13 +126,150 @@
   word-break: break-word;
 }
 
-.study-actions,
+.flash-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.flash-card-answer {
+  width: 100%;
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  text-align: left;
+  animation: flash-in 0.22s ease;
+}
+
+@keyframes flash-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.flash-meaning {
+  margin: 0;
+  font-size: clamp(1.15rem, 4.5vw, 1.4rem);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+}
+
+.flash-detail {
+  background: color-mix(in srgb, var(--info) 8%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--info) 35%, var(--border));
+  border-radius: 0.75rem;
+  padding: 0.7rem 0.85rem;
+}
+
+.flash-detail p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.flash-example {
+  background: color-mix(in srgb, var(--warn) 7%, var(--surface));
+  border-color: color-mix(in srgb, var(--warn) 35%, var(--border));
+}
+
+.flash-example p {
+  font-style: italic;
+}
+
+.flash-guess {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+.reveal-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.flash-card-footer {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 0.9rem calc(0.75rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 88%, var(--surface-2));
+}
+
+.flash-card-footer:has(.flash-next-btn) {
+  grid-template-columns: 1fr;
+}
+
+.flash-footer-btn {
+  appearance: none;
+  width: 3.35rem;
+  height: 3.35rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+
+.flash-footer-btn:active {
+  transform: scale(0.94);
+}
+
+.flash-footer-miss {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 30%, transparent);
+}
+
+.flash-footer-ok {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface));
+  color: var(--accent-dim);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.flash-footer-label {
+  margin: 0;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.flash-guess-btn,
+.flash-next-btn {
+  width: 100%;
+}
+
 .study-type,
-.study-options,
-.study-reveal {
+.study-options {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+}
+
+.typing-actions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
 }
 
 .meaning-input {
@@ -159,67 +334,6 @@
   background: var(--surface-2);
 }
 
-.reveal-label {
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.2rem;
-}
-
-.info-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 0.85rem;
-  padding: 0.85rem 1rem;
-}
-
-.info-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: var(--ink);
-}
-
-.correct-answer {
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
-  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
-  padding: 1.1rem 1.15rem;
-}
-
-.correct-answer .reveal-label {
-  font-size: 0.75rem;
-  margin-bottom: 0.35rem;
-}
-
-.correct-answer p {
-  font-size: clamp(1.25rem, 4.8vw, 1.5rem);
-  line-height: 1.45;
-  font-weight: 600;
-}
-
-.mnemonic-card {
-  border-color: color-mix(in srgb, var(--info) 40%, var(--border));
-  background: color-mix(in srgb, var(--info) 8%, var(--surface));
-}
-
-.example-card {
-  border-color: color-mix(in srgb, var(--warn) 35%, var(--border));
-  background: color-mix(in srgb, var(--warn) 7%, var(--surface));
-}
-
-.example-card p {
-  font-style: italic;
-}
-
-.grade-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-}
-
 .study-done {
   justify-content: center;
   text-align: center;
@@ -238,8 +352,8 @@
 }
 
 @media (min-height: 780px) {
-  .study-hero {
-    padding: 1.15rem 0.9rem;
+  .flash-card {
+    min-height: min(62vh, 32rem);
   }
 
   .study-word {
